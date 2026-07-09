@@ -185,6 +185,39 @@
     </div>
   </section>
 
+    <!-- Registration Form (Primary — above fold after learn section) -->
+  <section class="form-section" id="register">
+    <div class="container">
+      <h2>Reserve Your FREE Seat Now</h2>
+      <p class="section-sub">Only 50 spots available — once they're gone, they're gone.</p>
+      <div class="form-card">
+        <div class="spots-left">🔥 Spots are limited — Register now to guarantee your seat!</div>
+        <form id="registration-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="first_name" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="last_name" placeholder="Last name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(405) 555-1234" required />
+          </div>
+          <button type="submit" class="submit-btn">🎟️ Claim My Free Seat</button>
+        </form>
+        <p class="guarantee">🔒 Your info is safe. We'll only use it to send event details.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   <section class="testimonials-section">
     <div class="container">
@@ -223,8 +256,7 @@
           <div class="faq-answer"><p>Just yourself and an open mind! We'll provide everything you need. Bring a notebook if you'd like to take notes. Light refreshments will be provided.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Is this a sales pitch?</button>
-          <div class="faq-answer"><p>No. This is a genuine educational event. You'll leave with real, actionable knowledge about how to buy a home without a bank. No pressure, no hard sells — just information you can use.</p></div>
+          <button class="faq-question">Is this a sales pitch?</button>          <div class="faq-answer"><p>No. This is a genuine educational event. You'll leave with real, actionable knowledge about how to buy a home without a bank. No pressure, no hard sells — just information you can use.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Where is it located?</button>
@@ -238,36 +270,13 @@
     </div>
   </section>
 
-  <!-- Registration Form -->
-  <section class="form-section" id="register">
-    <div class="container">
-      <h2>Reserve Your FREE Seat Now</h2>
-      <p class="section-sub">Only 50 spots available — once they're gone, they're gone.</p>
-      <div class="form-card">
-        <div class="spots-left">🔥 Spots are limited — Register now to guarantee your seat!</div>
-        <form id="registration-form" action="#" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="first_name" placeholder="First name" required />
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="last_name" placeholder="Last name" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(405) 555-1234" required />
-          </div>
-          <button type="submit" class="submit-btn">🎟️ Claim My Free Seat</button>
-        </form>
-        <p class="guarantee">🔒 Your info is safe. We'll only use it to send event details.</p>
-      </div>
+  <!-- Bottom CTA (scrolls up to form) -->
+  <section class="form-section" style="padding: 2.5rem 1rem;">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; margin-bottom: 0.5rem;">Still Have Questions?</h2>
+      <p style="color: #93c5fd; margin-bottom: 1.5rem; font-size: 0.95rem;">Your seat is free — and we answer everything at the event. Don't miss it.</p>
+      <button onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})" style="display: inline-block; background: #C41E3A; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; padding: 1rem 2.5rem; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; text-decoration: none;" onmouseover="this.style.background='#a01830'" onmouseout="this.style.background='#C41E3A'">🎟️ CLAIM MY FREE SEAT ↑</button>
+      <p style="color: #6b7280; font-size: 0.75rem; margin-top: 0.75rem;">🔒 Only 50 spots. Register above.</p>
     </div>
   </section>
 
