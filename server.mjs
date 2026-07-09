@@ -24,6 +24,14 @@ app.get("/ebook-call", (req, res) => {
   res.sendFile(path.join(DIST, "ebook-call.html"));
 });
 
+app.get("/events", (req, res) => {
+  res.sendFile(path.join(DIST, "events.html"));
+});
+
+app.get("/events-confirmation", (req, res) => {
+  res.sendFile(path.join(DIST, "events-confirmation.html"));
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.sendFile(path.join(DIST, "index.html"));

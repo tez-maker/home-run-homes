@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>You're In! 🎉 | Rent-to-Own Seminar Confirmation | Home Run Homes</title>
+  <meta name="description" content="You're registered for the FREE Rent-to-Own Home Buying Seminar. Here are your event details." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..1000;1,6..12,300..1000&display=swap" rel="stylesheet" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '859563789884057');
+    fbq('track', 'PageView');
+    fbq('track', 'Schedule');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito Sans', sans-serif; background: #f8fafc; color: #1B2A4A; line-height: 1.6; }
+    
+    .container { max-width: 40rem; margin: 0 auto; padding: 0 1rem; }
+    
+    /* Success Header */
+    .success-header { background: linear-gradient(135deg, #1B2A4A 0%, #0f1b33 100%); color: #fff; padding: 3.5rem 1rem; text-align: center; }
+    .success-header .checkmark { width: 80px; height: 80px; background: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(34,197,94,0.3); }
+    .success-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; }
+    .success-header .greeting { font-size: 1.1rem; color: #93c5fd; }
+    
+    /* Event Details Card */
+    .details-card { background: #fff; border-radius: 16px; padding: 2rem; margin: -2rem auto 2rem; max-width: 36rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; position: relative; z-index: 10; }
+    .details-card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: #1B2A4A; margin-bottom: 1.25rem; text-align: center; }
+    .detail-row { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.9rem 0; border-bottom: 1px solid #f3f4f6; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-row .icon { flex-shrink: 0; width: 2.25rem; height: 2.25rem; background: #dbeafe; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .detail-row .info { flex: 1; }
+    .detail-row .info .label { font-size: 0.75rem; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; }
+    .detail-row .info .value { font-size: 1rem; font-weight: 700; color: #1B2A4A; }
+    .detail-row .info .note { font-size: 0.8rem; color: #6b7280; margin-top: 0.15rem; }
+    
+    /* Address highlight */
+    .address-highlight { background: #fef2f2; border: 2px solid #C41E3A; border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; text-align: center; }
+    .address-highlight .pin { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .address-highlight .address { font-size: 1.15rem; font-weight: 800; color: #C41E3A; }
+    .address-highlight .city { font-size: 0.9rem; color: #4b5563; margin-top: 0.25rem; }
+    .address-highlight .maps-link { display: inline-block; margin-top: 0.75rem; background: #C41E3A; color: #fff; text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; transition: background 0.2s; }
+    .address-highlight .maps-link:hover { background: #a01830; }
+    
+    /* What to Expect */
+    .expect-section { background: #fff; border-radius: 16px; padding: 2rem; margin: 0 auto 2rem; max-width: 36rem; box-shadow: 0 4px 16px rgba(0,0,0,0.04); border: 1px solid #e5e7eb; }
+    .expect-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #1B2A4A; margin-bottom: 1rem; }
+    .expect-list { list-style: none; }
+    .expect-list li { padding: 0.6rem 0; display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.925rem; color: #374151; }
+    .expect-list li::before { content: '✓'; color: #22c55e; font-weight: 800; flex-shrink: 0; }
+    
+    /* Share CTA */
+    .share-section { text-align: center; padding: 2rem 1rem; max-width: 36rem; margin: 0 auto; }
+    .share-section h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: #1B2A4A; margin-bottom: 0.75rem; }
+    .share-section p { font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #1B2A4A; color: #fff; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; transition: background 0.2s; border: none; cursor: pointer; font-family: inherit; }
+    .share-btn:hover { background: #0f1b33; }
+    .share-btn.calendar { background: #2563eb; }
+    .share-btn.calendar:hover { background: #1d4ed8; }
+    .share-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    
+    /* Footer */
+    .footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #e5e7eb; }
+    .footer .espanol { color: #C41E3A; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .footer .disclaimer { font-size: 0.7rem; color: #9ca3af; max-width: 36rem; margin: 0 auto; }
+    
+    /* Confetti animation */
+    @keyframes confetti-fall { 0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
+    .confetti { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+    .confetti-piece { position: absolute; width: 10px; height: 10px; top: -10px; animation: confetti-fall 3s ease-out forwards; }
+  </style>
+</head>
+<body>
+  <!-- Confetti container -->
+  <div class="confetti" id="confetti"></div>
+
+  <!-- Success Header -->
+  <section class="success-header">
+    <div class="container">
+      <div class="checkmark">✓</div>
+      <h1>You're In! 🎉</h1>
+      <p class="greeting" id="greeting">Your seat is reserved. We can't wait to see you there!</p>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <div class="container">
+    <div class="details-card">
+      <h2>📋 Your Event Details</h2>
+      <div class="detail-row">
+        <div class="icon">📅</div>
+        <div class="info">
+          <div class="label">Date</div>
+          <div class="value">Friday, July 25th, 2026</div>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="icon">🕘</div>
+        <div class="info">
+          <div class="label">Time</div>
+          <div class="value">9:00 AM – 1:00 PM</div>
+          <div class="note">Doors open at 8:30 AM — arrive early for the best seats!</div>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="icon">🎟️</div>
+        <div class="info">
+          <div class="label">Cost</div>
+          <div class="value">100% FREE</div>
+        </div>
+      </div>
+
+      <!-- Address (revealed after registration) -->
+      <div class="address-highlight">
+        <div class="pin">📍</div>
+        <div class="address">124 NW 12th Street</div>
+        <div class="city">Oklahoma City, OK</div>
+        <a href="https://maps.google.com/?q=124+NW+12th+Street+Oklahoma+City+OK" target="_blank" rel="noopener" class="maps-link">📍 Open in Google Maps</a>
+      </div>
+    </div>
+
+    <!-- What to Expect -->
+    <div class="expect-section">
+      <h2>What to Expect</h2>
+      <ul class="expect-list">
+        <li>A welcoming, no-pressure environment</li>
+        <li>Expert presentation on Rent-to-Own, Lease Options &amp; Contract for Deed</li>
+        <li>Real examples of Oklahoma City families who became homeowners</li>
+        <li>Live Q&amp;A with a licensed Oklahoma real estate agent</li>
+        <li>Light refreshments provided</li>
+        <li>Bring a notebook — you'll want to take notes!</li>
+        <li>Spouses, partners, and family members are welcome</li>
+      </ul>
+    </div>
+
+    <!-- Share -->
+    <div class="share-section">
+      <h3>Know Someone Who Needs This?</h3>
+      <p>Share this free event with a friend or family member who wants to own a home.</p>
+      <div class="share-btns">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=FREE+Rent-to-Own+Home+Buying+Seminar&dates=20260725T140000Z/20260725T180000Z&details=Free+seminar+on+how+to+buy+a+home+without+a+bank.+Hosted+by+Home+Run+Homes.&location=124+NW+12th+Street,+Oklahoma+City,+OK&sf=true" target="_blank" rel="noopener" class="share-btn calendar">📅 Add to Google Calendar</a>
+        <button class="share-btn" onclick="shareEvent()">📤 Share with a Friend</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <section class="footer">
+    <p class="espanol">🇲🇽 Se Habla Español</p>
+    <p class="disclaimer">This is not legal or financial advice. Tez is a licensed real estate agent in Oklahoma, not an attorney or financial advisor. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing.</p>
+  </section>
+
+  <script>
+    // Personalize greeting
+    var params = new URLSearchParams(window.location.search);
+    var name = params.get('name');
+    if (name) {
+      document.getElementById('greeting').textContent = name + ', your seat is reserved. We can\'t wait to see you there!';
+    }
+
+    // Confetti effect
+    function createConfetti() {
+      var container = document.getElementById('confetti');
+      var colors = ['#C41E3A', '#1B2A4A', '#fbbf24', '#22c55e', '#2563eb', '#fff'];
+      for (var i = 0; i < 60; i++) {
+        var piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.animationDelay = Math.random() * 2 + 's';
+        piece.style.animationDuration = (2 + Math.random() * 2) + 's';
+        piece.style.width = (6 + Math.random() * 8) + 'px';
+        piece.style.height = (6 + Math.random() * 8) + 'px';
+        piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        container.appendChild(piece);
+      }
+      setTimeout(function() { container.remove(); }, 5000);
+    }
+    createConfetti();
+
+    // Share function
+    function shareEvent() {
+      var shareData = {
+        title: 'FREE Rent-to-Own Home Buying Seminar',
+        text: 'Hey! I just signed up for this free seminar on how to buy a home without a bank in OKC. You should check it out!',
+        url: 'https://homerunhomes.casa/events'
+      };
+      if (navigator.share) {
+        navigator.share(shareData);
+      } else {
+        // Fallback: copy link
+        navigator.clipboard.writeText('https://homerunhomes.casa/events').then(function() {
+          alert('Link copied! Share it with your friends.');
+        });
+      }
+    }
+  </script>
+
+  <!-- GHL Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER"></script>
+</body>
+</html>
