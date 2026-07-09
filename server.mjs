@@ -19,6 +19,11 @@ app.use(
   })
 );
 
+// Standalone pages (not part of the SPA bundle)
+app.get("/ebook-call", (req, res) => {
+  res.sendFile(path.join(DIST, "ebook-call.html"));
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.sendFile(path.join(DIST, "index.html"));
