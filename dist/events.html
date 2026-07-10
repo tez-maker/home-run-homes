@@ -12,8 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..1000;1,6..12,300..1000&display=swap" rel="stylesheet" />
-  <!-- Preload above-the-fold hero thumbnail for fast first paint -->
-  <link rel="preload" href="/assets/main_video_thumb_v2.jpg" as="image" />
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -146,20 +145,10 @@
   <!-- Video Section -->
   <section class="video-section">
     <div style="max-width:400px;margin:0 auto;padding:0 1rem;">
-      <div class="vid-wrap" id="mv1" onclick="playMainVideo()" style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.4);cursor:pointer;">
-        <img src="/assets/main_video_thumb_v2.jpg" alt="Watch: Rent-to-Own Home Buying Seminar" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:12px;" />
-        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:rgba(196,30,58,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 4px 24px rgba(0,0,0,0.5);">
-          <div style="width:0;height:0;border-style:solid;border-width:16px 0 16px 28px;border-color:transparent transparent transparent #fff;margin-left:6px;"></div>
-        </div>
+      <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.4);">
+        <iframe class="yt-autoplay" data-video-id="nhpNzoH5Ucg" src="https://www.youtube.com/embed/nhpNzoH5Ucg?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=nhpNzoH5Ucg&rel=0&controls=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <script>
-      function playMainVideo() {
-        var wrap = document.getElementById('mv1');
-        wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/nhpNzoH5Ucg?autoplay=1&rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        wrap.style.cursor = 'default';
-      }
-    </script>
   </section>
 
   <div class="divider"></div>
@@ -232,34 +221,19 @@
       <p class="section-sub">Hear from real Oklahoma families who found their home through our program.</p>
       <style>
         @media(max-width:600px){.testimonial-2col{grid-template-columns:1fr!important;}}
-        .vid-wrap{position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.3);cursor:pointer;}
-        .vid-wrap img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:12px;transition:opacity 0.2s;}
-        .vid-wrap .play-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(196,30,58,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform 0.2s;}
-        .vid-wrap:hover .play-overlay{transform:translate(-50%,-50%) scale(1.1);}
-        .vid-wrap .play-overlay::after{content:'';display:block;width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff;margin-left:5px;}
-        .vid-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;}
       </style>
       <div class="testimonial-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:840px;margin:0 auto;">
         <div style="max-width:400px;margin:0 auto;width:100%;">
-          <div class="vid-wrap" id="tv1" onclick="playTestimonial('tv1','https://www.youtube.com/embed/XTEfRqWou8Q?autoplay=1&rel=0')">
-            <img src="/assets/testimonial1_thumb.jpg?v=2" alt="Client Testimonial 1" loading="lazy" decoding="async" />
-            <div class="play-overlay"></div>
+          <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.3);">
+            <iframe class="yt-autoplay" data-video-id="XTEfRqWou8Q" src="https://www.youtube.com/embed/XTEfRqWou8Q?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=XTEfRqWou8Q&rel=0&controls=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div style="max-width:400px;margin:0 auto;width:100%;">
-          <div class="vid-wrap" id="tv2" onclick="playTestimonial('tv2','https://www.youtube.com/embed/YGZ1J24zRyk?autoplay=1&rel=0')">
-            <img src="/assets/testimonial2_thumb.jpg?v=2" alt="Client Testimonial 2" loading="lazy" decoding="async" />
-            <div class="play-overlay"></div>
+          <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.3);">
+            <iframe class="yt-autoplay" data-video-id="YGZ1J24zRyk" src="https://www.youtube.com/embed/YGZ1J24zRyk?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=YGZ1J24zRyk&rel=0&controls=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <script>
-        function playTestimonial(id, src) {
-          var wrap = document.getElementById(id);
-          wrap.innerHTML = '<iframe src="' + src + '?autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;" allow="autoplay" allowfullscreen></iframe>';
-          wrap.style.cursor = 'default';
-        }
-      </script>
     </div>
   </section>
 
@@ -341,6 +315,49 @@
         floatingCta.style.display = 'none';
       }
     });
+  </script>
+
+  <!-- YouTube IFrame API + Intersection Observer for autoplay/pause on scroll -->
+  <script>
+    // Load YouTube IFrame API
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var ytPlayers = [];
+    function onYouTubeIframeAPIReady() {
+      document.querySelectorAll('.yt-autoplay').forEach(function(iframe) {
+        var player = new YT.Player(iframe, {
+          events: {
+            'onReady': function(event) {
+              // Store player reference on the iframe element
+              iframe._ytPlayer = event.target;
+              // Initially pause — Intersection Observer will play when visible
+              event.target.pauseVideo();
+            }
+          }
+        });
+      });
+
+      // Set up Intersection Observer
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          var iframe = entry.target;
+          if (iframe._ytPlayer && typeof iframe._ytPlayer.playVideo === 'function') {
+            if (entry.isIntersecting) {
+              iframe._ytPlayer.playVideo();
+            } else {
+              iframe._ytPlayer.pauseVideo();
+            }
+          }
+        });
+      }, { threshold: 0.4 });
+
+      document.querySelectorAll('.yt-autoplay').forEach(function(iframe) {
+        observer.observe(iframe);
+      });
+    }
   </script>
 
   <!-- GHL Chat Widget -->
