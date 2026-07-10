@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..1000;1,6..12,300..1000&display=swap" rel="stylesheet" />
+  <!-- Preload above-the-fold hero thumbnail for fast first paint -->
+  <link rel="preload" href="/assets/main_video_thumb.jpg" as="image" />
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -240,13 +242,13 @@
       <div class="testimonial-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:840px;margin:0 auto;">
         <div style="max-width:400px;margin:0 auto;width:100%;">
           <div class="vid-wrap" id="tv1" onclick="playTestimonial('tv1','https://drive.google.com/file/d/1DFByVKY0FVlo78VASX72voN8QCaKBBT1/preview')">
-            <img src="/assets/testimonial1_thumb.jpg" alt="Client Testimonial 1" />
+            <img src="/assets/testimonial1_thumb.jpg" alt="Client Testimonial 1" loading="lazy" decoding="async" />
             <div class="play-overlay"></div>
           </div>
         </div>
         <div style="max-width:400px;margin:0 auto;width:100%;">
           <div class="vid-wrap" id="tv2" onclick="playTestimonial('tv2','https://drive.google.com/file/d/13DWvf-b_3MuhY1in6L61N57XTTaLJAfF/preview')">
-            <img src="/assets/testimonial2_thumb.jpg" alt="Client Testimonial 2" />
+            <img src="/assets/testimonial2_thumb.jpg" alt="Client Testimonial 2" loading="lazy" decoding="async" />
             <div class="play-overlay"></div>
           </div>
         </div>
@@ -317,7 +319,7 @@
   </div>
 
   <!-- GHL Form Embed Script -->
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 
   <!-- FAQ Accordion + Floating CTA Script -->
   <script>
@@ -342,6 +344,6 @@
   </script>
 
   <!-- GHL Chat Widget -->
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER"></script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER" defer></script>
 </body>
 </html>
