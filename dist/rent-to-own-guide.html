@@ -118,7 +118,7 @@
     /* ── Hero / Above the Fold ── */
     .hero {
       background: var(--navy);
-      padding: 4rem 1.5rem 5rem;
+      padding: 3rem 1.5rem 4rem;
       position: relative;
       overflow: hidden;
     }
@@ -140,11 +140,11 @@
     @media (max-width: 700px) {
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1.75rem;
         text-align: center;
       }
       .hero-book { order: -1; }
-      .hero-book img { max-width: 240px; margin: 0 auto; display: block; }
+      .hero-book img { max-width: 220px; margin: 0 auto; display: block; }
     }
     .hero-content { color: var(--white); }
     .hero-eyebrow {
@@ -222,9 +222,13 @@
     /* Book image */
     .hero-book img {
       width: 100%;
-      max-width: 340px;
+      max-width: 300px;
       height: auto;
-      filter: drop-shadow(0 32px 64px rgba(0,0,0,0.6));
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.5));
+      border-radius: 8px;
+    }
+    @media (max-width: 700px) {
+      .hero-book img { max-width: 220px; }
     }
 
     /* ── Section Shared ── */
@@ -509,8 +513,8 @@
       <!-- Left: Book mockup -->
       <div class="hero-book">
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663238491479/KuEHuQKzBPQcYoTvnK5dPs/hrh-ebook-mockup-EsVZPYbgiGavwvbf6JBAYk.webp"
-          alt="The Ultimate Guide to Buying a Home Without a Bank — Home Run Homes"
+          src="/manus-storage/free-guide-hero_716e1eb9.png"
+          alt="Free Guide: How to Buy a Rent-to-Own Home in OKC — Home Run Homes"
           loading="eager"
         />
       </div>
