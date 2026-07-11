@@ -71,6 +71,21 @@
     .share-btn.calendar:hover { background: #1d4ed8; }
     .share-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
     
+    /* Facebook Community Section */
+    .fb-section { background: #fff; max-width: 36rem; margin: 0 auto 2rem; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+    .fb-section .fb-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .fb-section .fb-body { padding: 1.75rem; text-align: center; }
+    .fb-section .fb-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1877F2; margin-bottom: 0.6rem; }
+    .fb-section h3 { font-size: 1.25rem; font-weight: 800; color: #1B2A4A; margin-bottom: 0.6rem; line-height: 1.3; }
+    .fb-section p { font-size: 0.9rem; color: #4b5563; line-height: 1.65; margin-bottom: 1.5rem; }
+    .fb-perks { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; text-align: left; }
+    .fb-perk { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; color: #374151; }
+    .fb-perk::before { content: '✓'; color: #1877F2; font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+    .fb-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #1877F2; color: #fff; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; transition: background 0.2s; }
+    .fb-btn:hover { background: #1565C0; }
+    .fb-btn svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .fb-note { font-size: 0.72rem; color: #9ca3af; margin-top: 0.75rem; }
+
     /* Footer */
     .footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #e5e7eb; }
     .footer .espanol { color: #C41E3A; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; }
@@ -152,6 +167,34 @@
       <div class="share-btns">
         <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=FREE+Rent-to-Own+Home+Buying+Seminar&dates=20260725T140000Z/20260725T180000Z&details=Free+seminar+on+how+to+buy+a+home+without+a+bank.+Hosted+by+Home+Run+Homes.&location=124+NW+12th+Street,+Oklahoma+City,+OK&sf=true" target="_blank" rel="noopener" class="share-btn calendar">📅 Add to Google Calendar</a>
         <button class="share-btn" onclick="shareEvent()">📤 Share with a Friend</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Facebook Community Section -->
+  <div class="container">
+    <div class="fb-section">
+      <img
+        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663238491479/KuEHuQKzBPQcYoTvnK5dPs/community-togetherness-LCGDos45XUCpiwchXMHftR.webp"
+        alt="OKC homebuyer community"
+        class="fb-img"
+        loading="lazy"
+      />
+      <div class="fb-body">
+        <div class="fb-eyebrow">Free Facebook Community</div>
+        <h3>Stay Connected Before, During &amp; After the Event</h3>
+        <p>Join our private group to stay in the loop on event updates, connect with other attendees, and get early access to homes before they hit the market.</p>
+        <div class="fb-perks">
+          <div class="fb-perk">Event updates, reminders &amp; last-minute details</div>
+          <div class="fb-perk">Connect with other OKC families attending the seminar</div>
+          <div class="fb-perk">See new homes before they're publicly listed</div>
+          <div class="fb-perk">Ask questions and get answers from the HRH team</div>
+        </div>
+        <a href="https://www.facebook.com/groups/1354062796157340" target="_blank" rel="noopener" class="fb-btn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Join Our Free Community
+        </a>
+        <p class="fb-note">Free to join. No spam. Just a real community of OKC families.</p>
       </div>
     </div>
   </div>
