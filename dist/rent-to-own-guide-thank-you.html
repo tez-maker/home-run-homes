@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Free Guide Is On Its Way! | Home Run Homes</title>
+  <meta name="description" content="Your free rent-to-own guide is on its way. Join our community to connect with other OKC families." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1b2e;
+      --white: #ffffff;
+      --gold: #d4a853;
+      --red: #C41E3A;
+      --fb-blue: #1877F2;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 540px;
+      width: 100%;
+    }
+    .checkmark {
+      width: 64px;
+      height: 64px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 0.75rem;
+      color: var(--gold);
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: rgba(255,255,255,0.15);
+      margin: 0 auto 2.5rem;
+    }
+    .community-section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+    }
+    .community-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+    .community-section p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .perks {
+      text-align: left;
+      margin-bottom: 1.75rem;
+    }
+    .perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .perk-icon {
+      color: #22c55e;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--fb-blue);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      width: 100%;
+      justify-content: center;
+    }
+    .fb-btn:hover { background: #1565d8; transform: scale(1.02); }
+    .fb-btn:active { transform: scale(0.98); }
+    .fb-btn svg { width: 20px; height: 20px; fill: currentColor; }
+    .note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="checkmark">✓</div>
+    <h1>Your Free Guide Is On Its Way!</h1>
+    <p class="subtitle">Check your email in the next few minutes. While you wait, there's one more thing that'll help you on your journey...</p>
+    <div class="divider"></div>
+    <div class="community-section">
+      <h2>Join Our Free Community</h2>
+      <p>Hundreds of Oklahoma City families are on the same path as you — exploring rent-to-own, owner financing, and a way home without a bank. Walk this road together.</p>
+      <div class="perks">
+        <div class="perk"><span class="perk-icon">✓</span> Connect with OKC families exploring homeownership</div>
+        <div class="perk"><span class="perk-icon">✓</span> See new homes posted before they hit the market</div>
+        <div class="perk"><span class="perk-icon">✓</span> Get tips, stories & encouragement from real people</div>
+        <div class="perk"><span class="perk-icon">✓</span> Ask questions — our team answers inside the group</div>
+      </div>
+      <a href="https://www.facebook.com/groups/1354062796157340" target="_blank" rel="noopener" class="fb-btn">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Join Our Free Community
+      </a>
+      <p class="note">Free to join. No spam. Just real OKC families helping each other.</p>
+    </div>
+  </div>
+</body>
+</html>

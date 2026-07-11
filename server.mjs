@@ -36,6 +36,10 @@ app.get("/rent-to-own-guide", (req, res) => {
   res.sendFile(path.join(DIST, "rent-to-own-guide.html"));
 });
 
+app.get("/rent-to-own-guide-thank-you", (req, res) => {
+  res.sendFile(path.join(DIST, "rent-to-own-guide-thank-you.html"));
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.sendFile(path.join(DIST, "index.html"));
