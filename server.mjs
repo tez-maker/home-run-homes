@@ -29,6 +29,10 @@ app.get("/events", (req, res) => {
 });
 
 app.get("/events-confirmation", (req, res) => {
+
+app.get("/rent-to-own-guide", (req, res) => {
+  res.sendFile(path.join(DIST, "rent-to-own-guide.html"));
+});
   res.sendFile(path.join(DIST, "events-confirmation.html"));
 });
 

@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Free Rent-to-Own Guide | Home Run Homes</title>
+  <meta name="description" content="Download your free guide to buying a home in Oklahoma City without a bank. Learn about Rent-to-Own, Owner Financing, and Contract for Deed — no credit check required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Guide: Buy a Home Without a Bank | Home Run Homes" />
+  <meta property="og:description" content="Download your free guide to buying a home in Oklahoma City without a bank. No credit check required." />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663238491479/KuEHuQKzBPQcYoTvnK5dPs/hrh-ebook-mockup-iYnejHE7PH8aiak5MFZMmK.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '859563789884057');
+    fbq('track', 'PageView');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0d1b2e;
+      --navy-mid:   #162236;
+      --navy-light: #1e3050;
+      --red:        #b91c1c;
+      --red-hover:  #991b1b;
+      --white:      #ffffff;
+      --off-white:  #f8f8f6;
+      --gray-100:   #f3f4f6;
+      --gray-200:   #e5e7eb;
+      --gray-400:   #9ca3af;
+      --gray-600:   #4b5563;
+      --gray-800:   #1f2937;
+      --gold:       #c9a84c;
+      --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Announcement Bar ── */
+    .announcement-bar {
+      background: var(--navy);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 0.55rem 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .announcement-bar strong { color: var(--white); font-weight: 600; }
+
+    /* ── Nav ── */
+    .nav {
+      background: var(--navy);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--white);
+    }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 4px; }
+    .nav-logo-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .nav-logo-sub {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+    }
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 0.45rem 1rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── Hero / Above the Fold ── */
+    .hero {
+      background: var(--navy);
+      padding: 4rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 30% 50%, rgba(185,28,28,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 64rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .hero-book { order: -1; }
+      .hero-book img { max-width: 240px; margin: 0 auto; display: block; }
+    }
+    .hero-content { color: var(--white); }
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-content .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 700px) { .hero-badges { justify-content: center; } }
+    .hero-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.35rem 0.75rem;
+      border-radius: 3px;
+    }
+
+    /* Form card inside hero */
+    .hero-form-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    }
+    .form-card-header {
+      background: var(--red);
+      padding: 1rem 1.5rem;
+      text-align: center;
+    }
+    .form-card-header p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.2rem;
+    }
+    .form-card-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    /* Book image */
+    .hero-book img {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 32px 64px rgba(0,0,0,0.6));
+    }
+
+    /* ── Section Shared ── */
+    .section-rule { height: 1px; background: var(--gray-200); }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      text-align: center;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      max-width: 32rem;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    /* ── What You'll Learn ── */
+    .learn-section {
+      background: var(--off-white);
+      padding: 5rem 1.5rem;
+    }
+    .learn-grid {
+      max-width: 44rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    @media (max-width: 560px) { .learn-grid { grid-template-columns: 1fr; } }
+    .learn-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      border-right: 1px solid var(--gray-200);
+    }
+    .learn-item:nth-child(even) { border-right: none; }
+    @media (max-width: 560px) {
+      .learn-item { border-right: none; }
+      .learn-item:nth-child(even) { border-right: none; }
+    }
+    .learn-item:nth-last-child(-n+2) { border-bottom: none; }
+    @media (max-width: 560px) { .learn-item:last-child { border-bottom: none; } }
+    .learn-num {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      margin-top: 0.15rem;
+      width: 1.25rem;
+    }
+    .learn-item p {
+      font-size: 0.9rem;
+      color: var(--gray-800);
+      line-height: 1.55;
+    }
+    .learn-outer {
+      max-width: 44rem;
+      margin: 0 auto;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── Testimonials ── */
+    .testimonials-section {
+      background: var(--navy);
+      padding: 5rem 1.5rem;
+      color: var(--white);
+    }
+    .testimonials-section .section-title { color: var(--white); }
+    .testimonials-section .section-sub { color: rgba(255,255,255,0.45); }
+    .testimonials-section .section-eyebrow { color: rgba(255,255,255,0.35); }
+    .testimonial-grid {
+      max-width: 52rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) { .testimonial-grid { grid-template-columns: 1fr; max-width: 26rem; } }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 1.75rem;
+    }
+    .testimonial-stars {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .testimonial-quote {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+    .testimonial-author strong {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.85rem;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--white);
+      padding: 5rem 1.5rem;
+    }
+    .faq-list { max-width: 36rem; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); }
+    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-body);
+      gap: 1rem;
+      transition: color 0.15s;
+    }
+    .faq-question:hover { color: var(--red); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--gray-400);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--gray-600);
+      transition: border-color 0.2s, color 0.2s;
+      line-height: 1;
+    }
+    .faq-item.open .faq-icon { border-color: var(--red); color: var(--red); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1.25rem; }
+    .faq-answer p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── Bottom CTA ── */
+    .bottom-cta {
+      background: var(--navy);
+      padding: 5rem 1.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .bottom-cta .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.75rem;
+    }
+    .bottom-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .bottom-cta p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-family: var(--font-body);
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: var(--red-hover); }
+    .btn-primary:active { transform: scale(0.97); }
+
+    /* ── Footer ── */
+    .footer-section {
+      background: var(--navy-mid);
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+    }
+    .footer-section .espanol {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.75rem;
+    }
+    .footer-section .disclaimer {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.22);
+      max-width: 36rem;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    100% Free for Buyers &nbsp;·&nbsp; <strong>Se Habla Español</strong> &nbsp;·&nbsp; Serving OKC &amp; Surrounding Areas
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <img src="/assets/logo-white-bg_3975df56.png" alt="Home Run Homes" />
+      <div>
+        <div class="nav-logo-text">Home Run Homes</div>
+        <div class="nav-logo-sub">Dueño a Dueño</div>
+      </div>
+    </a>
+    <a href="/book-a-call" class="nav-cta">Book a Call</a>
+  </nav>
+
+  <!-- Hero: Book + Form -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+
+      <!-- Left: Book mockup -->
+      <div class="hero-book">
+        <img
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663238491479/KuEHuQKzBPQcYoTvnK5dPs/hrh-ebook-mockup-EsVZPYbgiGavwvbf6JBAYk.webp"
+          alt="The Ultimate Guide to Buying a Home Without a Bank — Home Run Homes"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Right: Headline + Form -->
+      <div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">Free Download</div>
+          <h1>Get Your Free Copy of<br><em>The Ultimate Guide</em></h1>
+          <p class="hero-sub">Learn how to buy a home in Oklahoma City without a bank, without perfect credit, and without paying a dime.</p>
+          <div class="hero-badges">
+            <span class="hero-badge">No Bank Required</span>
+            <span class="hero-badge">No Credit Check</span>
+            <span class="hero-badge">100% Free</span>
+          </div>
+        </div>
+        <div class="hero-form-card">
+          <div class="form-card-header">
+            <p>Enter your info below</p>
+            <h3>Send Me the Free Guide</h3>
+          </div>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/mtg4u5FRKhFsmWZ9mpNz"
+            style="width:100%;height:480px;border:none;"
+            id="inline-mtg4u5FRKhFsmWZ9mpNz"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Free Guide Download"
+            data-height="480"
+            data-layout-iframe-id="inline-mtg4u5FRKhFsmWZ9mpNz"
+            data-form-id="mtg4u5FRKhFsmWZ9mpNz"
+            title="Free Guide Download"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What You'll Learn -->
+  <section class="learn-section">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div class="section-eyebrow">Inside the Guide</div>
+      <h2 class="section-title">What You'll Learn</h2>
+      <p class="section-sub">A practical, plain-English breakdown of your path to homeownership — no jargon, no fluff.</p>
+      <div class="learn-outer">
+        <div class="learn-grid">
+          <div class="learn-item">
+            <span class="learn-num">01</span>
+            <p>The 3 main paths to homeownership without a bank — and which one fits your situation</p>
+          </div>
+          <div class="learn-item">
+            <span class="learn-num">02</span>
+            <p>How Rent-to-Own works step by step, including what to watch out for in the contract</p>
+          </div>
+          <div class="learn-item">
+            <span class="learn-num">03</span>
+            <p>What Owner Financing means and why sellers offer it — and how to negotiate the terms</p>
+          </div>
+          <div class="learn-item">
+            <span class="learn-num">04</span>
+            <p>How to qualify for a home even if you've been denied by traditional lenders</p>
+          </div>
+          <div class="learn-item">
+            <span class="learn-num">05</span>
+            <p>The exact questions to ask before signing any owner-financed agreement</p>
+          </div>
+          <div class="learn-item">
+            <span class="learn-num">06</span>
+            <p>How to get into a home in OKC in as little as 30 days — a realistic timeline</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div class="section-eyebrow">Real Families</div>
+      <h2 class="section-title">Oklahoma City Families Who Made It Happen</h2>
+      <p class="section-sub">These are real people who used our guide and our program to become homeowners.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"I was denied by 3 banks because of my credit. Home Run Homes showed me there was another way. Now I'm a homeowner. I still can't believe it."</p>
+          <div class="testimonial-author">
+            <strong>Maria G.</strong>
+            Oklahoma City, OK
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"We're self-employed and no bank would touch us. The guide explained everything clearly. Now we own a 3-bedroom home and our kids have a yard."</p>
+          <div class="testimonial-author">
+            <strong>Carlos &amp; Ana R.</strong>
+            Moore, OK
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"High DTI killed every mortgage application I submitted. This guide opened my eyes. Home Run Homes found me a home with owner financing in 2 weeks."</p>
+          <div class="testimonial-author">
+            <strong>James T.</strong>
+            Midwest City, OK
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div style="max-width:64rem;margin:0 auto;">
+      <div class="section-eyebrow">Questions</div>
+      <h2 class="section-title">Frequently Asked</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Is the guide really free? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes, 100% free. No credit card, no hidden fees, no catch. We created this guide to help Oklahoma City families understand their options. You'll receive it instantly via email after submitting your info.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do I need good credit to use your service? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>No. That's exactly what the guide is about. We specialize in alternative financing — Rent-to-Own, Lease Options, and Contract for Deed — that don't require traditional bank approval or a perfect credit score.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What areas do you serve? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>We serve the OKC metro area including Oklahoma City, Moore, Norman, Edmond, Midwest City, Yukon, Del City, Bethany, Newcastle, El Reno, The Village, Tulsa, and Shawnee.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is this a sales pitch? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>No. The guide is a genuine educational resource. After you download it, our team may reach out to see if we can help you find a home — but there's no pressure and no obligation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How is Home Run Homes different from a real estate agent? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>We're a matchmaking service — we connect qualified buyers with property owners who offer owner financing or rent-to-own arrangements. Our service is 100% free for buyers. One or more owners holds an active Oklahoma real estate license.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div style="max-width:36rem;margin:0 auto;">
+      <div class="eyebrow">Ready to get started?</div>
+      <h2>Get Your Free Copy Now</h2>
+      <p>It takes 30 seconds. We'll send it to your inbox instantly.</p>
+      <button class="btn-primary" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})">
+        Get My Free Copy
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer-section">
+    <p class="espanol">Se Habla Español &nbsp;·&nbsp; Dueño a Dueño</p>
+    <div class="footer-links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/">Home</a>
+    </div>
+    <p class="disclaimer">This is an educational guide only, not legal or financial advice. One or more owners of Home Run Homes holds an active real estate license in Oklahoma. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing and consult with appropriate professionals before making any real estate decisions. Results vary by individual situation.</p>
+  </section>
+
+  <!-- GHL Form Script -->
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+
+  <!-- FAQ Accordion -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('open');
+          var icon = el.querySelector('.faq-icon');
+          if (icon) icon.textContent = '+';
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          var icon = item.querySelector('.faq-icon');
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  </script>
+
+  <!-- GHL Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER" defer></script>
+</body>
+</html>
