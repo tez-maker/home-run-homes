@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <title>Log In or Sign Up | Home Run Homes</title>
-  <meta name="description" content="Create your free Home Run Homes account to see every owner-financed home available in the OKC metro. No bank needed. Se Habla Español." />
+  <meta name="description" content="Create your free Home Run Homes account to see every owner-financed home available in the OKC metro. No bank needed." />
   <meta name="robots" content="noindex" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Log In or Sign Up | Home Run Homes" />
@@ -82,28 +82,6 @@
       font-size: 0.75rem;
       color: rgba(255,255,255,0.6);
       letter-spacing: 0.08em;
-    }
-    .lang-toggle {
-      display: flex;
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-    .lang-toggle button {
-      background: transparent;
-      border: none;
-      color: rgba(255,255,255,0.6);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 0.4rem 1.4rem;
-      cursor: pointer;
-      transition: all .15s;
-    }
-    .lang-toggle button.active {
-      background: var(--red);
-      color: var(--white);
     }
     .card {
       background: var(--white);
@@ -237,159 +215,70 @@
     <a class="brand" href="/">
       <img src="/assets/logo-white-bg_3975df56.png" alt="Home Run Homes Logo" />
       <h1>HOME RUN HOMES</h1>
-      <span data-i18n="tagline">Se Habla Español • Dueño a Dueño</span>
+      <span>Owner-Financed Homes in OKC</span>
     </a>
-
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
-      <button id="lang-es" onclick="setLang('es')">ES</button>
-    </div>
 
     <div class="card">
       <div class="tabs">
-        <button id="tab-login" onclick="showTab('login')" data-i18n="tabLogin">LOG IN</button>
-        <button id="tab-signup" onclick="showTab('signup')" data-i18n="tabSignup">SIGN UP</button>
+        <button id="tab-login" onclick="showTab('login')">LOG IN</button>
+        <button id="tab-signup" onclick="showTab('signup')">SIGN UP</button>
       </div>
 
       <!-- LOG IN -->
       <div class="panel" id="panel-login">
-        <h2 data-i18n="loginTitle">WELCOME BACK</h2>
-        <p class="sub" data-i18n="loginSub">Log in to see every available home.</p>
+        <h2>WELCOME BACK</h2>
+        <p class="sub">Log in to see every available home.</p>
         <form id="form-login" novalidate>
-          <label for="login-email" data-i18n="lblEmail">Email</label>
+          <label for="login-email">Email</label>
           <input type="email" id="login-email" name="email" autocomplete="email" required />
-          <label for="login-password" data-i18n="lblPassword">Password</label>
+          <label for="login-password">Password</label>
           <input type="password" id="login-password" name="password" autocomplete="current-password" required />
-          <button class="btn" type="submit" id="btn-login" data-i18n="btnLogin">LOG IN</button>
+          <button class="btn" type="submit" id="btn-login">LOG IN</button>
           <div class="msg" id="msg-login"></div>
         </form>
-        <p class="switch-line"><span data-i18n="noAccount">Don't have an account?</span> <a onclick="showTab('signup')" data-i18n="linkSignup">Sign up free</a></p>
+        <p class="switch-line">Don't have an account? <a onclick="showTab('signup')">Sign up free</a></p>
       </div>
 
       <!-- SIGN UP -->
       <div class="panel" id="panel-signup">
-        <h2 data-i18n="signupTitle">CREATE YOUR FREE ACCOUNT</h2>
-        <p class="sub" data-i18n="signupSub">Get instant access to every owner-financed home in the OKC metro. 100% free for buyers.</p>
+        <h2>CREATE YOUR FREE ACCOUNT</h2>
+        <p class="sub">Get instant access to every owner-financed home in the OKC metro. 100% free for buyers.</p>
         <form id="form-signup" novalidate>
-          <label for="su-name" data-i18n="lblName">Full Name</label>
+          <label for="su-name">Full Name</label>
           <input type="text" id="su-name" name="fullName" autocomplete="name" required />
-          <label for="su-email" data-i18n="lblEmail2">Email</label>
+          <label for="su-email">Email</label>
           <input type="email" id="su-email" name="email" autocomplete="email" required />
-          <label for="su-phone" data-i18n="lblPhone">Phone</label>
+          <label for="su-phone">Phone</label>
           <input type="tel" id="su-phone" name="phone" autocomplete="tel" required />
-          <label for="su-password" data-i18n="lblPassword2">Password</label>
+          <label for="su-password">Password</label>
           <input type="password" id="su-password" name="password" autocomplete="new-password" minlength="6" required />
-          <button class="btn" type="submit" id="btn-signup" data-i18n="btnSignup">SIGN UP FREE</button>
+          <button class="btn" type="submit" id="btn-signup">SIGN UP FREE</button>
           <div class="msg" id="msg-signup"></div>
         </form>
-        <p class="switch-line"><span data-i18n="haveAccount">Already have an account?</span> <a onclick="showTab('login')" data-i18n="linkLogin">Log in</a></p>
+        <p class="switch-line">Already have an account? <a onclick="showTab('login')">Log in</a></p>
       </div>
     </div>
 
-    <p class="trust" data-i18n="trust"><strong>No bank needed. No credit check. No fees for buyers.</strong> Your info is safe with us — we never sell your data.</p>
-    <a class="back-home" href="/" data-i18n="backHome">← Back to homepage</a>
+    <p class="trust"><strong>No bank needed. No credit check. No fees for buyers.</strong> Your info is safe with us — we never sell your data.</p>
+    <a class="back-home" href="/">← Back to homepage</a>
   </div>
 
   <footer>
-    <p data-i18n="disclaimer">One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Please ask questions and read all agreements carefully before signing.</p>
+    <p>One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Please ask questions and read all agreements carefully before signing.</p>
   </footer>
 
   <script>
-    const I18N = {
-      en: {
-        tagline: "Se Habla Español • Dueño a Dueño",
-        tabLogin: "LOG IN",
-        tabSignup: "SIGN UP",
-        loginTitle: "WELCOME BACK",
-        loginSub: "Log in to see every available home.",
-        lblEmail: "Email",
-        lblPassword: "Password",
-        btnLogin: "LOG IN",
-        noAccount: "Don't have an account?",
-        linkSignup: "Sign up free",
-        signupTitle: "CREATE YOUR FREE ACCOUNT",
-        signupSub: "Get instant access to every owner-financed home in the OKC metro. 100% free for buyers.",
-        lblName: "Full Name",
-        lblEmail2: "Email",
-        lblPhone: "Phone",
-        lblPassword2: "Password",
-        btnSignup: "SIGN UP FREE",
-        haveAccount: "Already have an account?",
-        linkLogin: "Log in",
-        trustStrong: "No bank needed. No credit check. No fees for buyers.",
-        trustRest: " Your info is safe with us — we never sell your data.",
-        backHome: "← Back to homepage",
-        disclaimer: "One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Please ask questions and read all agreements carefully before signing.",
-        errors: {
-          name_required: "Please enter your full name.",
-          invalid_email: "Please enter a valid email address.",
-          invalid_phone: "Please enter a valid phone number (10 digits).",
-          weak_password: "Password must be at least 6 characters.",
-          email_exists: "That email already has an account. Try logging in instead.",
-          invalid_credentials: "Wrong email or password. Please try again.",
-          missing_fields: "Please fill out all fields.",
-          server_error: "Something went wrong. Please try again.",
-          network: "Connection problem. Please check your internet and try again."
-        },
-        success: "Success! Taking you to the listings..."
-      },
-      es: {
-        tagline: "Se Habla Español • Dueño a Dueño",
-        tabLogin: "INICIAR SESIÓN",
-        tabSignup: "REGISTRARSE",
-        loginTitle: "BIENVENIDO DE NUEVO",
-        loginSub: "Inicia sesión para ver todas las casas disponibles.",
-        lblEmail: "Correo Electrónico",
-        lblPassword: "Contraseña",
-        btnLogin: "INICIAR SESIÓN",
-        noAccount: "¿No tienes una cuenta?",
-        linkSignup: "Regístrate gratis",
-        signupTitle: "CREA TU CUENTA GRATIS",
-        signupSub: "Acceso instantáneo a todas las casas con financiamiento del dueño en el área metro de OKC. 100% gratis para compradores.",
-        lblName: "Nombre Completo",
-        lblEmail2: "Correo Electrónico",
-        lblPhone: "Teléfono",
-        lblPassword2: "Contraseña",
-        btnSignup: "REGÍSTRATE GRATIS",
-        haveAccount: "¿Ya tienes una cuenta?",
-        linkLogin: "Inicia sesión",
-        trustStrong: "Sin banco. Sin verificación de crédito. Sin costo para compradores.",
-        trustRest: " Tu información está segura — nunca vendemos tus datos.",
-        backHome: "← Volver a la página principal",
-        disclaimer: "Uno o más miembros administradores tienen una licencia de bienes raíces activa en Oklahoma. Esto no es asesoramiento financiero, ni actuamos como asesores financieros. Por favor haga preguntas y lea todos los acuerdos cuidadosamente antes de firmar.",
-        errors: {
-          name_required: "Por favor escribe tu nombre completo.",
-          invalid_email: "Por favor escribe un correo electrónico válido.",
-          invalid_phone: "Por favor escribe un número de teléfono válido (10 dígitos).",
-          weak_password: "La contraseña debe tener al menos 6 caracteres.",
-          email_exists: "Ese correo ya tiene una cuenta. Intenta iniciar sesión.",
-          invalid_credentials: "Correo o contraseña incorrectos. Inténtalo de nuevo.",
-          missing_fields: "Por favor completa todos los campos.",
-          server_error: "Algo salió mal. Por favor inténtalo de nuevo.",
-          network: "Problema de conexión. Revisa tu internet e inténtalo de nuevo."
-        },
-        success: "¡Listo! Llevándote a las casas disponibles..."
-      }
+    const ERRORS = {
+      name_required: "Please enter your full name.",
+      invalid_email: "Please enter a valid email address.",
+      invalid_phone: "Please enter a valid phone number (10 digits).",
+      weak_password: "Password must be at least 6 characters.",
+      email_exists: "That email already has an account. Try logging in instead.",
+      invalid_credentials: "Wrong email or password. Please try again.",
+      missing_fields: "Please fill out all fields.",
+      server_error: "Something went wrong. Please try again.",
+      network: "Connection problem. Please check your internet and try again."
     };
-
-    let lang = localStorage.getItem("hrh_lang") || "en";
-
-    function setLang(l) {
-      lang = l;
-      localStorage.setItem("hrh_lang", l);
-      document.documentElement.lang = l;
-      document.getElementById("lang-en").classList.toggle("active", l === "en");
-      document.getElementById("lang-es").classList.toggle("active", l === "es");
-      const t = I18N[l];
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        if (key === "trust") {
-          el.innerHTML = "<strong>" + t.trustStrong + "</strong>" + t.trustRest;
-        } else if (t[key]) {
-          el.textContent = t[key];
-        }
-      });
-    }
 
     function showTab(tab) {
       document.getElementById("tab-login").classList.toggle("active", tab === "login");
@@ -402,7 +291,6 @@
     function getNext() {
       const params = new URLSearchParams(location.search);
       const next = params.get("next") || "/thank-you";
-      // only allow same-site relative paths
       return next.startsWith("/") && !next.startsWith("//") ? next : "/thank-you";
     }
 
@@ -430,7 +318,7 @@
         });
         const data = await res.json().catch(() => ({}));
         if (res.ok && data.ok) {
-          showMsg(msgId, I18N[lang].success, "success");
+          showMsg(msgId, "Success! Taking you to the listings...", "success");
           if (url === "/api/signup" && typeof fbq === "function") {
             fbq("track", "CompleteRegistration");
           }
@@ -438,9 +326,9 @@
           return;
         }
         const errKey = data.error || "server_error";
-        showMsg(msgId, I18N[lang].errors[errKey] || I18N[lang].errors.server_error, "error");
+        showMsg(msgId, ERRORS[errKey] || ERRORS.server_error, "error");
       } catch (e) {
-        showMsg(msgId, I18N[lang].errors.network, "error");
+        showMsg(msgId, ERRORS.network, "error");
       } finally {
         btn.disabled = false;
       }
@@ -464,8 +352,7 @@
       }, "msg-signup", "btn-signup");
     });
 
-    // Init: language + tab based on URL
-    setLang(lang);
+    // Init: tab based on URL
     showTab(location.pathname === "/signup" ? "signup" : "login");
   </script>
 </body>
