@@ -1,12 +1,11 @@
 /**
  * Production server for Railway deployment.
  * Serves the Vite-built static files with SPA fallback (all routes → index.html).
- * Includes user auth (signup/login) backed by SQLite + express-session,
+ * Includes user auth (signup/login) backed by JSON file storage + express-session,
  * and gates /thank-you (all listings) behind login.
  */
 import express from "express";
 import session from "express-session";
-import Database from "better-sqlite3";
 import crypto from "crypto";
 import path from "path";
 import fs from "fs";
@@ -18,26 +17,56 @@ const PORT = process.env.PORT || 3000;
 const DIST = path.join(__dirname, "dist");
 
 /* ────────────────────────────────────────────────
- * Database (SQLite via better-sqlite3 — file auto-created)
+ * JSON-based user storage (no native deps needed)
  * ──────────────────────────────────────────────── */
 const DATA_DIR = process.env.DATA_DIR || __dirname;
-const db = new Database(path.join(DATA_DIR, "users.db"));
-db.pragma("journal_mode = WAL");
-db.exec(`
-  CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    full_name TEXT NOT NULL,
-    email TEXT NOT NULL UNIQUE,
-    phone TEXT NOT NULL,
-    password_hash TEXT NOT NULL,
-    created_at TEXT NOT NULL DEFAULT (datetime('now'))
-  );
-  CREATE TABLE IF NOT EXISTS auth_sessions (
-    sid TEXT PRIMARY KEY,
-    sess TEXT NOT NULL,
-    expire INTEGER NOT NULL
-  );
-`);
+const USERS_FILE = path.join(DATA_DIR, "users.json");
+const SESSIONS_FILE = path.join(DATA_DIR, "sessions.json");
+
+function loadJSON(filePath, fallback) {
+  try {
+    if (fs.existsSync(filePath)) {
+      return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    }
+  } catch (err) {
+    console.warn(`Failed to load ${filePath}:`, err.message);
+  }
+  return fallback;
+}
+
+function saveJSON(filePath, data) {
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+  } catch (err) {
+    console.error(`Failed to save ${filePath}:`, err.message);
+  }
+}
+
+// In-memory user store backed by JSON file
+let users = loadJSON(USERS_FILE, []);
+let nextUserId = users.length > 0 ? Math.max(...users.map(u => u.id)) + 1 : 1;
+
+function saveUsers() {
+  saveJSON(USERS_FILE, users);
+}
+
+function findUserByEmail(email) {
+  return users.find(u => u.email === email);
+}
+
+function createUser({ fullName, email, phone, passwordHash }) {
+  const user = {
+    id: nextUserId++,
+    full_name: fullName,
+    email,
+    phone,
+    password_hash: passwordHash,
+    created_at: new Date().toISOString(),
+  };
+  users.push(user);
+  saveUsers();
+  return user;
+}
 
 /* Password hashing with Node's built-in scrypt (no native bcrypt needed) */
 function hashPassword(password) {
@@ -55,20 +84,25 @@ function verifyPassword(password, stored) {
 }
 
 /* ────────────────────────────────────────────────
- * SQLite-backed session store (persists across restarts)
+ * JSON-backed session store (persists across restarts)
  * ──────────────────────────────────────────────── */
-class SqliteStore extends session.Store {
+let sessionData = loadJSON(SESSIONS_FILE, {});
+
+function saveSessions() {
+  saveJSON(SESSIONS_FILE, sessionData);
+}
+
+class JsonStore extends session.Store {
   get(sid, cb) {
     try {
-      const row = db
-        .prepare("SELECT sess, expire FROM auth_sessions WHERE sid = ?")
-        .get(sid);
-      if (!row) return cb(null, null);
-      if (row.expire < Date.now()) {
-        db.prepare("DELETE FROM auth_sessions WHERE sid = ?").run(sid);
+      const entry = sessionData[sid];
+      if (!entry) return cb(null, null);
+      if (entry.expire < Date.now()) {
+        delete sessionData[sid];
+        saveSessions();
         return cb(null, null);
       }
-      cb(null, JSON.parse(row.sess));
+      cb(null, entry.sess);
     } catch (err) {
       cb(err);
     }
@@ -77,9 +111,8 @@ class SqliteStore extends session.Store {
     try {
       const maxAge = sess.cookie?.maxAge ?? 30 * 24 * 60 * 60 * 1000;
       const expire = Date.now() + maxAge;
-      db.prepare(
-        "INSERT INTO auth_sessions (sid, sess, expire) VALUES (?, ?, ?) ON CONFLICT(sid) DO UPDATE SET sess = excluded.sess, expire = excluded.expire"
-      ).run(sid, JSON.stringify(sess), expire);
+      sessionData[sid] = { sess, expire };
+      saveSessions();
       cb && cb(null);
     } catch (err) {
       cb && cb(err);
@@ -87,7 +120,8 @@ class SqliteStore extends session.Store {
   }
   destroy(sid, cb) {
     try {
-      db.prepare("DELETE FROM auth_sessions WHERE sid = ?").run(sid);
+      delete sessionData[sid];
+      saveSessions();
       cb && cb(null);
     } catch (err) {
       cb && cb(err);
@@ -100,9 +134,15 @@ class SqliteStore extends session.Store {
 
 /* Periodically clean expired sessions */
 setInterval(() => {
-  try {
-    db.prepare("DELETE FROM auth_sessions WHERE expire < ?").run(Date.now());
-  } catch {}
+  const now = Date.now();
+  let changed = false;
+  for (const sid of Object.keys(sessionData)) {
+    if (sessionData[sid].expire < now) {
+      delete sessionData[sid];
+      changed = true;
+    }
+  }
+  if (changed) saveSessions();
 }, 6 * 60 * 60 * 1000).unref();
 
 /* ────────────────────────────────────────────────
@@ -113,7 +153,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
-    store: new SqliteStore(),
+    store: new JsonStore(),
     name: "hrh.sid",
     secret: process.env.SESSION_SECRET || "hrh-okc-owner-financed-2026-keep-secret",
     resave: false,
@@ -185,20 +225,24 @@ app.post("/api/signup", async (req, res) => {
   const cleanEmail = String(email).trim().toLowerCase();
   const cleanName = String(fullName).trim();
   const cleanPhone = String(phone).trim();
+
+  // Check if email already exists
+  if (findUserByEmail(cleanEmail)) {
+    return res.status(409).json({ error: "email_exists" });
+  }
+
   try {
-    const info = db
-      .prepare(
-        "INSERT INTO users (full_name, email, phone, password_hash) VALUES (?, ?, ?, ?)"
-      )
-      .run(cleanName, cleanEmail, cleanPhone, hashPassword(String(password)));
-    req.session.user = { id: info.lastInsertRowid, name: cleanName, email: cleanEmail };
+    const user = createUser({
+      fullName: cleanName,
+      email: cleanEmail,
+      phone: cleanPhone,
+      passwordHash: hashPassword(String(password)),
+    });
+    req.session.user = { id: user.id, name: cleanName, email: cleanEmail };
     // Fire-and-forget lead submission to GHL (does not block signup)
     submitLeadToGHL({ fullName: cleanName, email: cleanEmail, phone: cleanPhone });
     return res.json({ ok: true, user: req.session.user });
   } catch (err) {
-    if (String(err.message).includes("UNIQUE")) {
-      return res.status(409).json({ error: "email_exists" });
-    }
     console.error("Signup error:", err);
     return res.status(500).json({ error: "server_error" });
   }
@@ -209,9 +253,7 @@ app.post("/api/login", (req, res) => {
   if (!email || !password) {
     return res.status(400).json({ error: "missing_fields" });
   }
-  const row = db
-    .prepare("SELECT * FROM users WHERE email = ?")
-    .get(String(email).trim().toLowerCase());
+  const row = findUserByEmail(String(email).trim().toLowerCase());
   if (!row || !verifyPassword(String(password), row.password_hash)) {
     return res.status(401).json({ error: "invalid_credentials" });
   }
