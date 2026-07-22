@@ -413,9 +413,7 @@
           <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           Join the Free Community
         </a>
-        <a href="#waitlist" class="btn-secondary">
-          📋 Join the Waitlist for Next Event
-        </a>
+
       </div>
     </div>
   </section>
@@ -436,53 +434,14 @@
     </div>
   </section>
 
-  <!-- Waitlist Section -->
-  <section class="waitlist-section" id="waitlist">
-    <div class="container">
-      <h2>Get on the Waitlist</h2>
-      <p>Be the first to know when we announce the next seminar. We'll text you as soon as registration opens.</p>
-      <form class="waitlist-form" id="waitlist-form">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <button type="submit">Notify Me First</button>
-      </form>
-      <p class="waitlist-success" id="waitlist-success">✅ You're on the list! We'll reach out as soon as the next event is announced.</p>
-    </div>
-  </section>
+
 
   <!-- Footer -->
   <section class="footer-section">
     <p class="disclaimer">One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing and consult with appropriate professionals.</p>
   </section>
 
-  <!-- Waitlist Form Submission -->
-  <script>
-    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var form = this;
-      var name = form.querySelector('[name="name"]').value;
-      var email = form.querySelector('[name="email"]').value;
-      var phone = form.querySelector('[name="phone"]').value;
 
-      // Submit to GHL via webhook
-      fetch('https://services.leadconnectorhq.com/hooks/aB7cDeFgHiJkLmNoPq/webhook-trigger', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          full_name: name,
-          email: email,
-          phone: phone,
-          tags: ['Event Waitlist'],
-          source: 'Events Page - Sold Out Waitlist'
-        })
-      }).catch(function() {});
-
-      // Show success regardless (don't block on webhook)
-      form.style.display = 'none';
-      document.getElementById('waitlist-success').style.display = 'block';
-    });
-  </script>
 
   <!-- GHL Chat Widget -->
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER" defer></script>
