@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>FREE Rent-to-Own Home Buying Seminar | Home Run Homes</title>
-  <meta name="description" content="FREE Rent-to-Own Home Buying Seminar in Oklahoma City — July 25th, 2026. Learn how to buy a home without a bank. Only 50 spots available!" />
+  <title>SOLD OUT — Rent-to-Own Home Buying Seminar | Home Run Homes</title>
+  <meta name="description" content="The FREE Rent-to-Own Home Buying Seminar on July 25th is SOLD OUT! Join our community to get notified about the next event." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="FREE Rent-to-Own Home Buying Seminar | Only 50 Spots!" />
-  <meta property="og:description" content="Learn how to buy a home without a bank or credit check. July 25th, 2026 in OKC. Reserve your FREE seat now — limited spots!" />
+  <meta property="og:title" content="SOLD OUT — Rent-to-Own Home Buying Seminar | Home Run Homes" />
+  <meta property="og:description" content="This event sold out! Join our free community to be first in line for the next one." />
   <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663238491479/iXyTzqjlNpIZcJtx.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -28,7 +27,6 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --navy: #0d1b2e;
       --navy-mid: #162236;
@@ -42,10 +40,10 @@
       --gray-600: #4b5563;
       --gray-800: #1f2937;
       --accent-gold: #c9a84c;
+      --green: #16a34a;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-display: 'Playfair Display', Georgia, serif;
     }
-
     body {
       font-family: var(--font-body);
       background: var(--white);
@@ -53,32 +51,33 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-
     .container { max-width: 48rem; margin: 0 auto; padding: 0 1.5rem; }
-    .container-wide { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem; }
 
-    /* ── Announcement Bar ── */
-    .announcement-bar {
-      background: var(--navy);
-      color: rgba(255,255,255,0.75);
-      text-align: center;
-      padding: 0.6rem 1rem;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .announcement-bar strong {
+    /* ── Sold Out Banner ── */
+    .sold-out-bar {
+      background: var(--red);
       color: var(--white);
-      font-weight: 600;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .sold-out-bar span {
+      display: inline-block;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
 
     /* ── Hero ── */
     .hero {
       background: var(--navy);
       color: var(--white);
-      padding: 2rem 1.5rem 1.5rem;
+      padding: 4rem 1.5rem 3rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -97,599 +96,392 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent-gold);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
       font-weight: 700;
       line-height: 1.15;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.01em;
     }
     .hero h1 em {
       font-style: italic;
       color: var(--accent-gold);
     }
-    .hero .subtitle {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.65);
-      max-width: 34rem;
-      margin: 0 auto 2.5rem;
-      font-weight: 400;
-      line-height: 1.7;
-    }
-    .hero .event-details {
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 0;
-      justify-content: center;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .hero .event-details .detail {
-      padding: 0.65rem 1.25rem;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.8);
-      border-right: 1px solid rgba(255,255,255,0.12);
-      letter-spacing: 0.02em;
-    }
-    .hero .event-details .detail:last-child { border-right: none; }
-    .hero .event-details .detail span {
-      display: block;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 0.15rem;
-    }
-
-    /* ── Video Section ── */
-    .video-section {
-      background: var(--navy-mid);
-      padding: 4rem 1.5rem;
-    }
-    .video-wrapper {
-      max-width: 380px;
-      margin: 0 auto;
-    }
-    .video-aspect {
-      position: relative;
-      padding-bottom: 177.78%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
-    }
-    .video-aspect iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-      border-radius: 8px;
-    }
-
-    /* ── Section Divider ── */
-    .section-rule {
-      height: 1px;
-      background: var(--gray-200);
-    }
-
-    /* ── Form Section ── */
-    .form-section {
-      background: var(--off-white);
-      padding: 5rem 1.5rem;
-    }
-    .section-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--red);
-      text-align: center;
-      margin-bottom: 0.75rem;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 4vw, 2.25rem);
-      font-weight: 700;
-      text-align: center;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      margin-bottom: 2.5rem;
-      max-width: 32rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .form-card {
-      max-width: 32rem;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
-      border: 1px solid var(--gray-200);
-    }
-    .spots-notice {
-      background: #fef2f2;
-      border-bottom: 1px solid #fecaca;
-      padding: 0.6rem 1.25rem;
-      text-align: center;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--red);
-      letter-spacing: 0.03em;
-    }
-
-    /* ── What You'll Learn ── */
-    .learn-section {
-      background: var(--white);
-      padding: 5rem 1.5rem;
-    }
-    .learn-list {
-      max-width: 36rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .learn-item {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .learn-item:first-child { border-top: 1px solid var(--gray-200); }
-    .learn-item .num {
-      flex-shrink: 0;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--red);
-      width: 1.5rem;
-    }
-    .learn-item p {
-      font-size: 0.95rem;
-      color: var(--gray-800);
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    /* ── Testimonials ── */
-    .testimonials-section {
-      background: var(--navy);
-      padding: 5rem 1.5rem;
-      color: var(--white);
-    }
-    .testimonials-section .section-title { color: var(--white); }
-    .testimonials-section .section-sub { color: rgba(255,255,255,0.5); }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    @media (max-width: 600px) {
-      .testimonial-grid { grid-template-columns: 1fr; max-width: 380px; }
-    }
-    .testimonial-video-wrap {
-      position: relative;
-      padding-bottom: 177.78%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-    }
-    .testimonial-video-wrap iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-      border-radius: 8px;
-    }
-
-    /* ── FAQ ── */
-    .faq-section {
-      background: var(--off-white);
-      padding: 5rem 1.5rem;
-    }
-    .faq-list { max-width: 36rem; margin: 0 auto; }
-    .faq-item { border-bottom: 1px solid var(--gray-200); }
-    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 1.25rem 0;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--navy);
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-body);
-      gap: 1rem;
-      transition: color 0.15s;
-    }
-    .faq-question:hover { color: var(--red); }
-    .faq-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      border: 1.5px solid var(--gray-400);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: var(--gray-600);
-      transition: border-color 0.2s, color 0.2s;
-      line-height: 1;
-    }
-    .faq-item.open .faq-icon { border-color: var(--red); color: var(--red); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
-    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1.25rem; }
-    .faq-answer p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.7; }
-
-    /* ── Bottom CTA ── */
-    .bottom-cta {
-      background: var(--navy);
-      padding: 4rem 1.5rem;
-      text-align: center;
-      color: var(--white);
-    }
-    .bottom-cta .cta-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 0.75rem;
-    }
-    .bottom-cta h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      line-height: 1.2;
-    }
-    .bottom-cta p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
-    .btn-primary {
+    .hero .sold-badge {
       display: inline-block;
       background: var(--red);
       color: var(--white);
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 0.9rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 0.5rem 1.5rem;
       border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      font-family: var(--font-body);
-      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 2px solid rgba(255,255,255,0.3);
     }
-    .btn-primary:hover { background: var(--red-muted); }
-    .btn-primary:active { transform: scale(0.97); }
-    .bottom-cta .seats-note {
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.3);
-      letter-spacing: 0.04em;
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 36rem;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: var(--off-white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .cta-section p {
+      color: var(--gray-600);
+      font-size: 1rem;
+      max-width: 32rem;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      max-width: 24rem;
+      margin: 0 auto;
+    }
+    .btn-primary {
+      display: inline-block;
+      width: 100%;
+      background: #1877F2;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-primary:hover { background: #1565d8; transform: scale(1.02); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-secondary {
+      display: inline-block;
+      width: 100%;
+      background: var(--white);
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border: 2px solid var(--gray-200);
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--navy); transform: scale(1.02); }
+    .btn-secondary:active { transform: scale(0.98); }
+    .btn-icon {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* ── Social Proof ── */
+    .social-proof {
+      background: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .social-proof .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .social-proof .stat {
+      text-align: center;
+    }
+    .social-proof .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+    }
+    .social-proof .stat-label {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.25rem;
+    }
+    .social-proof .proof-text {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      max-width: 28rem;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    /* ── What You Missed ── */
+    .missed-section {
+      background: var(--navy-mid);
+      color: var(--white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .missed-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+    .missed-list {
+      max-width: 32rem;
+      margin: 0 auto;
+      text-align: left;
+      list-style: none;
+    }
+    .missed-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .missed-list li::before {
+      content: '✓';
+      color: var(--accent-gold);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .missed-cta {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .missed-cta a {
+      color: var(--accent-gold);
+      text-decoration: underline;
+    }
+
+    /* ── Waitlist Section ── */
+    .waitlist-section {
+      background: var(--off-white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .waitlist-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .waitlist-section p {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      max-width: 28rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .waitlist-form {
+      max-width: 24rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .waitlist-form input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .waitlist-form input:focus {
+      border-color: var(--navy);
+    }
+    .waitlist-form button {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.85rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .waitlist-form button:hover { background: var(--gray-800); }
+    .waitlist-success {
+      display: none;
+      color: var(--green);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
     }
 
     /* ── Footer ── */
     .footer-section {
-      background: var(--navy-mid);
-      padding: 2.5rem 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      background: var(--navy);
+      padding: 2rem 1.5rem;
       text-align: center;
     }
-    .footer-section .espanol {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 0.75rem;
-    }
-    .footer-section .disclaimer {
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.25);
+    .disclaimer {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.72rem;
       max-width: 36rem;
       margin: 0 auto;
       line-height: 1.6;
     }
 
-    /* ── Floating CTA (mobile) ── */
-    .floating-cta {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--red);
-      color: var(--white);
-      text-align: center;
-      padding: 1rem 1rem;
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      z-index: 1000;
-      box-shadow: 0 -2px 16px rgba(0,0,0,0.2);
-      cursor: pointer;
-      display: none;
-      transition: background 0.2s;
-      font-family: var(--font-body);
-      border: none;
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .social-proof .stat-row { gap: 2rem; }
+      .social-proof .stat-number { font-size: 2rem; }
     }
-    .floating-cta:hover { background: var(--red-muted); }
-    @media (max-width: 768px) { .floating-cta { display: block; } }
   </style>
 </head>
 <body>
 
-  <!-- Announcement Bar -->
-  <div class="announcement-bar">
-    Limited Availability — <strong>Only 50 Seats</strong> for July 25th
+  <!-- Sold Out Banner -->
+  <div class="sold-out-bar">
+    <span>🎉 THIS EVENT IS OFFICIALLY SOLD OUT 🎉</span>
   </div>
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="event-label">Live In-Person Event &nbsp;·&nbsp; Oklahoma City</div>
-      <h1>Free Rent-to-Own<br><em>Home Buying Seminar</em></h1>
-
+      <div class="event-label">July 25th, 2026 &nbsp;·&nbsp; Oklahoma City</div>
+      <h1>Rent-to-Own<br><em>Home Buying Seminar</em></h1>
+      <div class="sold-badge">SOLD OUT</div>
+      <p class="subtitle">This event filled up fast! But don't worry — join our free community to get first access to the next one and start learning about homeownership today.</p>
     </div>
   </section>
 
-  <!-- Registration Form -->
-  <section class="form-section" id="register">
+  <!-- Social Proof -->
+  <section class="social-proof">
     <div class="container">
-      <div class="section-eyebrow">Reserve Your Seat</div>
-      <h2 class="section-title">Only 50 Spots Available</h2>
-      <p class="section-sub">Once they're gone, they're gone. Registration is 100% free — no credit card, no obligation.</p>
-      <div class="form-card">
-        <div class="spots-notice">50 seats total — spots are going fast</div>
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/JIRcnxjh490fTq0wgmZK"
-          style="width:100%;height:514px;border:none;"
-          id="inline-JIRcnxjh490fTq0wgmZK"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Live RTO home buying Seminar"
-          data-height="514"
-          data-layout-iframe-id="inline-JIRcnxjh490fTq0wgmZK"
-          data-form-id="JIRcnxjh490fTq0wgmZK"
-          title="Live RTO home buying Seminar"
-        ></iframe>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-number">50</div>
+          <div class="stat-label">Seats Filled</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$3</div>
+          <div class="stat-label">Avg. Cost Per Seat</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Capacity</div>
+        </div>
       </div>
+      <p class="proof-text">"People are hungry for this information. The next event will sell out even faster."</p>
     </div>
   </section>
 
-  <!-- Main Video -->
-  <section class="video-section">
-    <div class="video-wrapper">
-      <div class="video-aspect">
-        <iframe class="yt-autoplay" data-video-id="nhpNzoH5Ucg"
-          src="https://www.youtube.com/embed/nhpNzoH5Ucg?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=nhpNzoH5Ucg&rel=0&controls=1"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-rule"></div>
-
-  <!-- What You'll Learn -->
-  <section class="learn-section">
+  <!-- Main CTA Section -->
+  <section class="cta-section">
     <div class="container">
-      <div class="section-eyebrow">Curriculum</div>
-      <h2 class="section-title">What You'll Learn</h2>
-      <p class="section-sub">Walk away with real, actionable knowledge — no fluff, no sales pitch.</p>
-      <div class="learn-list">
-        <div class="learn-item">
-          <span class="num">01</span>
-          <p>How to buy a home without a bank or credit check</p>
-        </div>
-        <div class="learn-item">
-          <span class="num">02</span>
-          <p>Understanding Rent-to-Own, Lease Options &amp; Contract for Deed</p>
-        </div>
-        <div class="learn-item">
-          <span class="num">03</span>
-          <p>How to qualify even if you've been denied by traditional lenders</p>
-        </div>
-        <div class="learn-item">
-          <span class="num">04</span>
-          <p>The step-by-step process to get into a home in OKC</p>
-        </div>
-        <div class="learn-item">
-          <span class="num">05</span>
-          <p>How to avoid common mistakes first-time alternative financing buyers make</p>
-        </div>
-        <div class="learn-item">
-          <span class="num">06</span>
-          <p>Live Q&amp;A with a licensed Oklahoma real estate agent</p>
-        </div>
+      <h2>Don't Miss the Next One</h2>
+      <p>Join our free Oklahoma Rent-to-Own community on Facebook. You'll get notified first about upcoming events, see available homes, and connect with others on the same path to homeownership.</p>
+      <div class="cta-buttons">
+        <a href="https://www.facebook.com/groups/renttoownokc" target="_blank" class="btn-primary">
+          <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Join the Free Community
+        </a>
+        <a href="#waitlist" class="btn-secondary">
+          📋 Join the Waitlist for Next Event
+        </a>
       </div>
     </div>
   </section>
 
-  <div class="section-rule"></div>
-
-  <!-- Testimonials -->
-  <section class="testimonials-section">
-    <div class="container-wide">
-      <div class="section-eyebrow" style="color:rgba(255,255,255,0.4);">Real Families</div>
-      <h2 class="section-title">Don't Just Take Our Word For It</h2>
-      <p class="section-sub">Hear from Oklahoma families who found their home through our program.</p>
-      <div class="testimonial-grid">
-        <div>
-          <div class="testimonial-video-wrap">
-            <iframe class="yt-autoplay" data-video-id="XTEfRqWou8Q"
-              src="https://www.youtube.com/embed/XTEfRqWou8Q?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=XTEfRqWou8Q&rel=0&controls=1"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <div>
-          <div class="testimonial-video-wrap">
-            <iframe class="yt-autoplay" data-video-id="YGZ1J24zRyk"
-              src="https://www.youtube.com/embed/YGZ1J24zRyk?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=YGZ1J24zRyk&rel=0&controls=1"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section">
+  <!-- What You Missed -->
+  <section class="missed-section">
     <div class="container">
-      <div class="section-eyebrow">Questions</div>
-      <h2 class="section-title">Frequently Asked</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">Is this really free? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Yes, 100% free. No hidden fees, no catch. We host this seminar to educate Oklahoma City families about alternative paths to homeownership. You won't be asked to pay anything.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Do I need good credit? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>No. That's exactly what this seminar is about. We'll teach you alternative financing options — Rent-to-Own, Lease Options, and Contract for Deed — that don't require traditional bank approval or a perfect credit score.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">What should I bring? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Just yourself and an open mind. We'll provide everything you need. Bring a notebook if you'd like to take notes. Light refreshments will be provided.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is this a sales pitch? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>No. This is a genuine educational event. You'll leave with real, actionable knowledge about how to buy a home without a bank. No pressure, no hard sells — just information you can use.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Where is it located? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>The event is in Oklahoma City. The exact address and directions will be sent to you via email and text after you register. This ensures we can manage capacity and provide you with parking details.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can I bring my spouse or partner? <span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Absolutely. Buying a home is a family decision, and we want everyone involved to hear the information firsthand. Just make sure they register too so we can save their seat.</p></div>
-        </div>
-      </div>
+      <h2>What This Seminar Covers</h2>
+      <ul class="missed-list">
+        <li>How rent-to-own and owner financing actually work (step by step)</li>
+        <li>Why you don't need a bank or perfect credit to buy a home</li>
+        <li>What to look for in a contract — and what to avoid</li>
+        <li>How to qualify yourself before you even talk to a seller</li>
+        <li>Real examples of OKC families who bought homes this way</li>
+        <li>Live Q&A with a licensed real estate professional</li>
+      </ul>
+      <p class="missed-cta">Can't wait for the next event? <a href="https://www.facebook.com/groups/renttoownokc" target="_blank">Join the community</a> and start learning today.</p>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="bottom-cta">
+  <!-- Waitlist Section -->
+  <section class="waitlist-section" id="waitlist">
     <div class="container">
-      <div class="cta-eyebrow">Still have questions?</div>
-      <h2>Your seat is free.<br>We answer everything at the event.</h2>
-      <p>Don't miss it — only 50 spots available.</p>
-      <button class="btn-primary" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">
-        Claim My Free Seat
-      </button>
-      <p class="seats-note">50 seats total &nbsp;·&nbsp; July 25th, 2026 &nbsp;·&nbsp; Oklahoma City</p>
+      <h2>Get on the Waitlist</h2>
+      <p>Be the first to know when we announce the next seminar. We'll text you as soon as registration opens.</p>
+      <form class="waitlist-form" id="waitlist-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <button type="submit">Notify Me First</button>
+      </form>
+      <p class="waitlist-success" id="waitlist-success">✅ You're on the list! We'll reach out as soon as the next event is announced.</p>
     </div>
   </section>
 
   <!-- Footer -->
   <section class="footer-section">
-    <p class="disclaimer">This is not legal or financial advice. Tez is a licensed real estate agent in Oklahoma, not an attorney or financial advisor. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing and consult with appropriate professionals.</p>
+    <p class="disclaimer">One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing and consult with appropriate professionals.</p>
   </section>
 
-  <!-- Floating CTA (mobile) -->
-  <button class="floating-cta" id="floating-cta" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">
-    Claim My Free Seat — Only 50 Spots
-  </button>
-
-  <!-- GHL Form Embed Script -->
-  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
-
-  <!-- FAQ Accordion + Floating CTA -->
+  <!-- Waitlist Form Submission -->
   <script>
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = this.parentElement;
-        var isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(function(el) {
-          el.classList.remove('open');
-          var icon = el.querySelector('.faq-icon');
-          if (icon) icon.textContent = '+';
-        });
-        if (!isOpen) {
-          item.classList.add('open');
-          var icon = item.querySelector('.faq-icon');
-          if (icon) icon.textContent = '−';
-        }
-      });
+    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var name = form.querySelector('[name="name"]').value;
+      var email = form.querySelector('[name="email"]').value;
+      var phone = form.querySelector('[name="phone"]').value;
+
+      // Submit to GHL via webhook
+      fetch('https://services.leadconnectorhq.com/hooks/aB7cDeFgHiJkLmNoPq/webhook-trigger', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          full_name: name,
+          email: email,
+          phone: phone,
+          tags: ['Event Waitlist'],
+          source: 'Events Page - Sold Out Waitlist'
+        })
+      }).catch(function() {});
+
+      // Show success regardless (don't block on webhook)
+      form.style.display = 'none';
+      document.getElementById('waitlist-success').style.display = 'block';
     });
-
-    var floatingCta = document.getElementById('floating-cta');
-    window.addEventListener('scroll', function() {
-      floatingCta.style.display = window.scrollY > 600 ? 'block' : 'none';
-    });
-  </script>
-
-  <!-- YouTube IFrame API + Intersection Observer for autoplay/pause on scroll -->
-  <script>
-    var tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    function onYouTubeIframeAPIReady() {
-      document.querySelectorAll('.yt-autoplay').forEach(function(iframe) {
-        new YT.Player(iframe, {
-          events: {
-            'onReady': function(event) {
-              iframe._ytPlayer = event.target;
-              event.target.pauseVideo();
-            }
-          }
-        });
-      });
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          var iframe = entry.target;
-          if (iframe._ytPlayer && typeof iframe._ytPlayer.playVideo === 'function') {
-            if (entry.isIntersecting) {
-              iframe._ytPlayer.playVideo();
-            } else {
-              iframe._ytPlayer.pauseVideo();
-            }
-          }
-        });
-      }, { threshold: 0.4 });
-
-      document.querySelectorAll('.yt-autoplay').forEach(function(iframe) {
-        observer.observe(iframe);
-      });
-    }
   </script>
 
   <!-- GHL Chat Widget -->
