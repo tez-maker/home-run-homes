@@ -344,6 +344,64 @@
       margin-top: 0.5rem;
     }
 
+    /* ── Community Image ── */
+    .community-img-section {
+      background: var(--white);
+      padding: 2rem 1.5rem 0;
+      text-align: center;
+    }
+    .community-img-section img {
+      max-width: 100%;
+      width: 480px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    /* ── Testimonials ── */
+    .testimonials-section {
+      background: var(--white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .testimonials-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2rem;
+    }
+    .testimonial-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: left;
+    }
+    .testimonial-card .quote {
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+    .testimonial-card .author {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .testimonial-stars {
+      color: var(--accent-gold);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
     /* ── Footer ── */
     .footer-section {
       background: var(--navy);
@@ -390,16 +448,20 @@
           <div class="stat-number">50</div>
           <div class="stat-label">Seats Filled</div>
         </div>
-        <div class="stat">
-          <div class="stat-number">$3</div>
-          <div class="stat-label">Avg. Cost Per Seat</div>
-        </div>
+
         <div class="stat">
           <div class="stat-number">100%</div>
           <div class="stat-label">Capacity</div>
         </div>
       </div>
       <p class="proof-text">"People are hungry for this information. The next event will sell out even faster."</p>
+    </div>
+  </section>
+
+  <!-- Community Image -->
+  <section class="community-img-section">
+    <div class="container">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=960&q=80" alt="Community of homeowners" />
     </div>
   </section>
 
@@ -435,6 +497,30 @@
   </section>
 
 
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What People Are Saying</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="quote">"I thought homeownership was impossible for me. Home Run Homes showed me it wasn't. Now I'm a homeowner."</p>
+          <p class="author">— Maria, Moore OK</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="quote">"We thought a foreclosure meant we'd never own again. Home Run Homes believed in us when we didn't believe in ourselves."</p>
+          <p class="author">— James & Jennifer, Edmond OK</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="quote">"No bank would touch us. Home Run Homes found us a beautiful 3-bedroom in Midwest City with owner financing. We moved in within 30 days."</p>
+          <p class="author">— DeShawn, Midwest City OK</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <section class="footer-section">
