@@ -63,7 +63,7 @@
     .hero {
       background: var(--navy);
       color: var(--white);
-      padding: 3.5rem 1.5rem 2.5rem;
+      padding: 3.5rem 1.5rem 3.5rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -447,34 +447,32 @@
       <h1>Want to Know How to Buy a Home <span class="highlight">Without Needing the Bank?</span></h1>
       <p class="subheadline">Get Instant Access to Our Free Training</p>
       <p class="sub-support">Discover the exact rent-to-own process everyday OKC families are using to become homeowners &mdash; no bank loan, no perfect credit, no games.</p>
-      <span class="arrow-down">&#9660;</span>
-    </div>
-  </section>
 
-  <!-- ═══════════════ 2. SIGN-UP FORM (GHL) ═══════════════ -->
-  <section class="form-section" id="signup">
-    <div class="form-card">
-      <h2>Unlock the Free Training</h2>
-      <p>Enter your info below and we'll send you instant access.</p>
+      <!-- Form embedded directly in hero for mobile-first conversion -->
+      <div class="form-card" id="signup" style="margin-top:1.75rem; text-align:center;">
+        <h2 style="color:var(--navy);">Get Free Access Now</h2>
+        <p style="color:var(--gray-600);">Enter your info below &mdash; instant access, no credit card needed.</p>
 
-      <!-- REPLACE WITH ACTUAL GHL FORM: swap "YOUR_GHL_FORM_ID" below with the real form ID from GoHighLevel (Sites → Forms → Embed) -->
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/YOUR_GHL_FORM_ID"
-        style="width:100%;height:420px;border:none;border-radius:8px"
-        id="inline-YOUR_GHL_FORM_ID"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-layout-iframe-id="inline-YOUR_GHL_FORM_ID"
-        data-form-id="YOUR_GHL_FORM_ID"
-        title="Free Training Sign-Up"
-      ></iframe>
+        <!-- REPLACE WITH ACTUAL GHL FORM: swap "YOUR_GHL_FORM_ID" below with the real form ID from GoHighLevel (Sites → Forms → Embed) -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/YOUR_GHL_FORM_ID"
+          style="width:100%;height:380px;border:none;border-radius:8px"
+          id="inline-YOUR_GHL_FORM_ID"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-layout-iframe-id="inline-YOUR_GHL_FORM_ID"
+          data-form-id="YOUR_GHL_FORM_ID"
+          title="Free Training Sign-Up"
+        ></iframe>
 
-      <p class="form-privacy">We respect your privacy. Your info is never sold or shared. Unsubscribe anytime.</p>
+        <p style="font-size:0.85rem;color:var(--gold);font-weight:700;margin-top:0.75rem;">&#10003; 100% Free &middot; No Credit Card &middot; Instant Access</p>
+        <p class="form-privacy">We respect your privacy. Your info is never sold or shared. Unsubscribe anytime.</p>
+      </div>
     </div>
   </section>
 
