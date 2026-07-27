@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In! | Home Run Homes</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1a2332;
+      --red: #c0392b;
+      --blue: #2563eb;
+      --gold: #f4a261;
+      --white: #ffffff;
+      --light-bg: #f8fafc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--light-bg);
+      color: var(--navy);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3a4f 100%);
+      color: var(--white);
+    }
+    .hero .checkmark {
+      width: 80px;
+      height: 80px;
+      background: #27ae60;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .steps-section {
+      padding: 2.5rem 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .steps-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--navy);
+    }
+    .step {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .step-content h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .step-content p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .expect-section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .expect-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .expect-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 1rem;
+    }
+    .expect-item .icon {
+      font-size: 1.3rem;
+    }
+    .fb-section {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .fb-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .fb-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fb-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+    .fb-btn:hover { background: #1d4ed8; }
+    .disclaimer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      padding: 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero { padding: 2rem 1rem 1.5rem; }
+      .steps-section { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="checkmark">✓</div>
+    <h1>YOU'RE IN!</h1>
+    <p>Your free Rent-to-Own Home Buying Training is unlocked. Here's what to do next.</p>
+  </div>
+
+  <div class="steps-section">
+    <h2>How to Access Your Training</h2>
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Check Your Email</h3>
+        <p>We just sent you a portal invite email. Look for an email from Home Run Homes with your login link. Check spam if you don't see it in a few minutes.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Create Your Password</h3>
+        <p>Click the link in the email and set up your password. This is your personal login to access the training anytime.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Start Watching</h3>
+        <p>Once you're logged in, the full training is right there. Watch at your own pace — it's yours forever.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>Earn Your Certificate</h3>
+        <p>Complete the training and you'll receive a Certificate of Completion. This shows you're educated and ready to take the next step toward homeownership.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="expect-section">
+    <h2>What to Expect</h2>
+    <div class="expect-item"><span class="icon">📱</span> A welcome text from Tez within the next few minutes</div>
+    <div class="expect-item"><span class="icon">📧</span> A portal invite email with your login link</div>
+    <div class="expect-item"><span class="icon">🎓</span> Full course access — watch anytime, come back anytime</div>
+    <div class="expect-item"><span class="icon">📜</span> Certificate of Completion when you finish</div>
+    <div class="expect-item"><span class="icon">📞</span> Option to book a free call with our team when you're ready</div>
+  </div>
+
+  <div class="fb-section">
+    <h2>Join Our Free Community</h2>
+    <p>Connect with other future homeowners in OKC. Get updates on available homes, upcoming events, and tips — all in one place.</p>
+    <a href="https://www.facebook.com/groups/renttoownokc" target="_blank" class="fb-btn">Join the Facebook Group</a>
+  </div>
+
+  <div class="disclaimer">
+    One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. We encourage you to ask questions and read all agreements before signing.
+  </div>
+</body>
+</html>

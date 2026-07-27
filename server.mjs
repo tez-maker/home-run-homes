@@ -352,6 +352,10 @@ app.get("/training", (req, res) => {
   res.sendFile(path.join(DIST, "training.html"));
 });
 
+app.get("/training-thankyou", (req, res) => {
+  res.sendFile(path.join(DIST, "training-thankyou.html"));
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.set("Cache-Control", "no-cache");
