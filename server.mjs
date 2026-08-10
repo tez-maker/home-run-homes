@@ -356,6 +356,16 @@ app.get("/training-thankyou", (req, res) => {
   res.sendFile(path.join(DIST, "training-thankyou.html"));
 });
 
+/* ────────────────────────────────────────────────
+ * Property listings API endpoint
+ * ──────────────────────────────────────────────── */
+const PROPERTIES_FILE = path.join(DATA_DIR, "properties.json");
+
+app.get("/api/properties", (req, res) => {
+  const properties = loadJSON(PROPERTIES_FILE, []);
+  res.json(properties);
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.set("Cache-Control", "no-cache");
@@ -365,4 +375,9 @@ app.get("*", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Home Run Homes running on port ${PORT}`);
 });
+
+
+/* ────────────────────────────────────────────────
+ * Property listings API endpoint
+ * ──────────────────────────────────────────────── */
 

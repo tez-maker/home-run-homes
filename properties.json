@@ -1,0 +1,1848 @@
+[
+  {
+    "id": "HRH-086",
+    "address": "407 E Cedar Dr",
+    "city": "Tuttle",
+    "bedrooms": "4",
+    "bathrooms": "3",
+    "monthlyPayment": "$3,875",
+    "downPayment": "$30,000",
+    "purchasePrice": "$500,000",
+    "status": "Available",
+    "sqft": "Completing mid July 4 bed 3 bath 2.5 acres with large shop. 2% commission with FULL down payment",
+    "images": [
+      "Coming Soon! (followed up 7/28)"
+    ]
+  },
+  {
+    "id": "HRH-169",
+    "address": "801 Cogswell Cir",
+    "city": "Edmond OK 73013",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,800",
+    "downPayment": "$10,000",
+    "purchasePrice": "$335,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/10m7-ajETp_yF-5Zf0X-Eqd6XYiq8YDdZ"
+    ]
+  },
+  {
+    "id": "HRH-117",
+    "address": "1150 Brockhaus Rd",
+    "city": "Guthrie OKC",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$3,250",
+    "downPayment": "$25,000",
+    "purchasePrice": "$330,000",
+    "status": "Available",
+    "sqft": "2 Car Garage on 2.27 acres. Large lot and secluded location. Roof and HVAC are in good shape. Brand new windows, new plumbing, full cosmetic remodel.",
+    "images": [
+      "https://www.zillow.com/homedetails/11500-Brockhaus-Rd-Guthrie-OK-73044/318411013_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-140",
+    "address": "10428  Leicester Dr",
+    "city": "Yukon, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,400",
+    "downPayment": "$15,000",
+    "purchasePrice": "$265,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/10428-Leicester-Dr-Yukon-OK-73099/21702950_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-167",
+    "address": "10104 Primrose Ln,",
+    "city": "Oklahoma City, OK 73159",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,300",
+    "downPayment": "$20,000",
+    "purchasePrice": "$255,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/10104-Primrose-Ln-Oklahoma-City-OK-73159/21756545_zpid/?utm_campaign=iosappmessage&utm_medium=referral&utm_source=txtshare"
+    ]
+  },
+  {
+    "id": "HRH-084",
+    "address": "103 Oak St",
+    "city": "MWC, OK",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,000",
+    "downPayment": "$10,000",
+    "purchasePrice": "$250,000",
+    "status": "Available",
+    "sqft": "Completing August 2026 4/2 Full ARV +1700 sqft",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-141",
+    "address": "600 SE 38th St",
+    "city": "Moore, OK 73160",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,475",
+    "downPayment": "$15,000",
+    "purchasePrice": "$250,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/600-SE-38th-St-Moore-OK-73160/21723661_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-083",
+    "address": "3312 NW 16th St",
+    "city": "OKC, OK",
+    "bedrooms": "2",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,850",
+    "downPayment": "$10,000",
+    "purchasePrice": "$240,000",
+    "status": "Available",
+    "sqft": "Completing August 2026 2/2 Full ARV",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-119",
+    "address": "3337 NW 29th St,",
+    "city": "Oklahoma City, OK 73107",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,300",
+    "downPayment": "$20,000",
+    "purchasePrice": "$240,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/3337-NW-29th-St-Oklahoma-City-OK-73107/21865682_zpid/?mmlb=g,3"
+    ]
+  },
+  {
+    "id": "HRH-168",
+    "address": "4520 NW 46th",
+    "city": "Warr Acres OK",
+    "bedrooms": "4",
+    "bathrooms": "3",
+    "monthlyPayment": "$2,300",
+    "downPayment": "$20,000",
+    "purchasePrice": "$240,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/4520-NW-46th-St-Warr-Acres-OK-73122/22036069_zpid/?mmlb=g,2"
+    ]
+  },
+  {
+    "id": "HRH-085",
+    "address": "409 E Linden Ln",
+    "city": "Mustang, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,975",
+    "downPayment": "$15,000",
+    "purchasePrice": "$235,000",
+    "status": "Available",
+    "sqft": "Completing September 2026 3/2 Full ARV full 2 car garage",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-023",
+    "address": "10104 Haverhill Place",
+    "city": "The Village",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,250",
+    "downPayment": "$10,000",
+    "purchasePrice": "$230,000",
+    "status": "Available",
+    "sqft": "1,188 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/1iSgcVxF__2Tsao3mGUoQz9sKla91crQ3"
+    ]
+  },
+  {
+    "id": "HRH-081",
+    "address": "1057 NW 7th St",
+    "city": "Moore, OK",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,000",
+    "downPayment": "$15,000",
+    "purchasePrice": "$230,000",
+    "status": "Available",
+    "sqft": "Completing August 2026 4/2 Full ARV +1700 sqft. Had to go through permitting, only just started",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-043",
+    "address": "3129 NW 41st St.",
+    "city": "Oklahoma City",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$2,030",
+    "downPayment": "$7,500",
+    "purchasePrice": "$220,000",
+    "status": "Available",
+    "sqft": "1,374 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/1Z1amSsVn8jQfr6W4jZagVCc-JaflNONd?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-036",
+    "address": "2024 Churchill Way",
+    "city": "Oklahoma City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,875",
+    "downPayment": "$8,000",
+    "purchasePrice": "$205,000",
+    "status": "Available",
+    "sqft": "760 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/16sh67xoPC7YECJ1Y7bkh8bn2PS7INFEp"
+    ]
+  },
+  {
+    "id": "HRH-046",
+    "address": "2116 Westchester Drive",
+    "city": "The Village",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,975",
+    "downPayment": "$7,500",
+    "purchasePrice": "$205,000",
+    "status": "Available",
+    "sqft": "1,092 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/15Qk3Mogyl89i-VU5G22yJpGALHEBmBt6"
+    ]
+  },
+  {
+    "id": "HRH-125",
+    "address": "3220 Hilltop Rd",
+    "city": "Midwest City",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,950",
+    "downPayment": "$8,000",
+    "purchasePrice": "$205,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://chg-offmarket.vercel.app/deals/2ed16dd5-a009-4f13-8b84-4b0f561f2bfc"
+    ]
+  },
+  {
+    "id": "HRH-078",
+    "address": "804 Glenwood Dr",
+    "city": "Yukon, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$10,000",
+    "purchasePrice": "$200,000",
+    "status": "Available",
+    "sqft": "Complete",
+    "images": [
+      "https://www.dropbox.com/scl/fo/yyzajpixwfgxniegf57cu/ALJ9N-ayu9Ab1LzZMYB0X0U?rlkey=gzo9m2im625jfcfs0qsb344ph&st=q6lagb9r&e=1&dl=0"
+    ]
+  },
+  {
+    "id": "HRH-120",
+    "address": "1404 Sandstone Dr, Noble",
+    "city": "OK 73068",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,000",
+    "downPayment": "$10,000",
+    "purchasePrice": "$200,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/1404-Sandstone-Dr-Noble-OK-73068/309937311_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-126",
+    "address": "19001 Pecan Creek Dr,",
+    "city": "Newalla, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "not provided",
+    "downPayment": "not provided",
+    "purchasePrice": "$200,000",
+    "status": "Available",
+    "sqft": "Monthly payment, down payment and terms not provided.",
+    "images": [
+      "https://chg-offmarket.vercel.app/deals/e2959989-597e-468c-ab2e-bdfe8a5c8deb"
+    ]
+  },
+  {
+    "id": "HRH-142",
+    "address": "11017 N Blackwelder Ave",
+    "city": "Oklahoma City, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,780",
+    "downPayment": "$8,000",
+    "purchasePrice": "$200,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/11017-N-Blackwelder-Ave-Oklahoma-City-OK-73120/21891129_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-170",
+    "address": "1116 Hawthorne Dr",
+    "city": "MWC, OK 73110",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,690",
+    "downPayment": "$6,500",
+    "purchasePrice": "$195,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/1116-Hawthorne-Dr-Midwest-City-OK-73110/22005704_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-060",
+    "address": "109 NE 3rd St, Moore, OK 73160",
+    "city": "Moore",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,850",
+    "downPayment": "$10,000",
+    "purchasePrice": "$190,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/1nLioYcFyUOuj2HmUa_eBuZctN-xkfVhZ?usp=drive_link"
+    ]
+  },
+  {
+    "id": "HRH-054",
+    "address": "12728 Nelson Ave",
+    "city": "Spencer",
+    "bedrooms": "5",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$7,500",
+    "purchasePrice": "$190,000",
+    "status": "Available",
+    "sqft": "1,395sqft / Fully Remodeled. New Roof. New HVAC to be installed once EMD is received.",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-091",
+    "address": "101 S Dallas",
+    "city": "Moore, OK",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,800",
+    "downPayment": "$10,000",
+    "purchasePrice": "$190,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/100-S-Dallas-Ave-Moore-OK-73160/21721837_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-094",
+    "address": "1008 S Miles Ave",
+    "city": "El Reno, OK 73036",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,550",
+    "downPayment": "$10,000",
+    "purchasePrice": "$190,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/1008-S-Miles-Ave-El-Reno-OK-73036/52546823_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-128",
+    "address": "2216 Dixon Rd",
+    "city": "Choctaw 73020",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,695",
+    "downPayment": "$12,500",
+    "purchasePrice": "$189,000",
+    "status": "Available",
+    "sqft": "1642 SqFt / Move in ready!",
+    "images": [
+      "https://drive.google.com/drive/folders/1kEFQRe8PWmbbRiOgt_7QL_r1U37HrvxD?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-049",
+    "address": "6910 NW 53rd St",
+    "city": "Bethany",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,700",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/6910-NW-53rd-St-Bethany-OK-73008/22014973_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-033",
+    "address": "9316 NE Stardust Lane",
+    "city": "Oklahoma City",
+    "bedrooms": "5",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$12,950",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "1,417 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/1J28_UIZ3Wsn5hb9kpsfZts-xOsLlWCD_?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-045",
+    "address": "3317 SE 57th Street",
+    "city": "Oklahoma City",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$2,035",
+    "downPayment": "$12,950",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "1,238 sqft",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-061",
+    "address": "3725 SW 25th St",
+    "city": "Oklahoma City",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "1,375 SqFt / Will be fully remodeled. Available July 15th",
+    "images": [
+      "will follow up"
+    ]
+  },
+  {
+    "id": "HRH-108",
+    "address": "2408 NW Ozmun",
+    "city": "Lawton, OK 73505",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,395",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "Condition: Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/2408-NW-Ozmun-Ave-Lawton-OK-73505/49459827_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-113",
+    "address": "2708 SW 60th",
+    "city": "OKC",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,793",
+    "downPayment": "$7,500",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "Loan Amt: $177,500 | Rate: 9.5% | P&I: $1,492.52 | Taxes: $150.00 | Ins: $150.00 | EMD Req: $2,000",
+    "images": [
+      "https://www.zillow.com/homedetails/2708-SW-60th-St-Oklahoma-City-OK-73159/21904457_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-124",
+    "address": "605 Timber Ln, Oklahoma City, OK 73127",
+    "city": "OKC",
+    "bedrooms": "3",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,800",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "not available yet"
+    ]
+  },
+  {
+    "id": "HRH-072",
+    "address": "942 Cedar Hill Pl",
+    "city": "Midwest City, OK",
+    "bedrooms": "3",
+    "bathrooms": "1.75",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$5,000",
+    "purchasePrice": "$180,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "\"The agents goes and gets their own photos for marketing. \""
+    ]
+  },
+  {
+    "id": "HRH-116",
+    "address": "2724 SW 60th St.",
+    "city": "Oklahoma City 73159",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$10,000",
+    "purchasePrice": "$180,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/2724-SW-60th-St-Oklahoma-City-OK-73159/21904461_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-122",
+    "address": "2408 NW 33rd St, OKC",
+    "city": "OKC",
+    "bedrooms": "$3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,625",
+    "downPayment": "$10,000",
+    "purchasePrice": "$176,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://login.3dtoursok.com/sites/elvqjpva/unbranded"
+    ]
+  },
+  {
+    "id": "HRH-139",
+    "address": "2408 NW 33rd",
+    "city": "Oklahoma City, OK",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,625",
+    "downPayment": "$10,000",
+    "purchasePrice": "$176,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://login.3dtoursok.com/sites/elvqjpva/unbranded"
+    ]
+  },
+  {
+    "id": "HRH-020",
+    "address": "1517 SE 46th St",
+    "city": "Oklahoma City",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,400",
+    "downPayment": "$3,500",
+    "purchasePrice": "$175,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "\"The agents goes and gets their own photos for marketing. \""
+    ]
+  },
+  {
+    "id": "HRH-055",
+    "address": "3113 SW 46th St",
+    "city": "OKC",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,700",
+    "downPayment": "$10,000",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/3113-SW-46th-St-Oklahoma-City-OK-73119/21906490_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-027",
+    "address": "4316 N. Libby Avenue",
+    "city": "Warr Acres",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,500",
+    "downPayment": "$7,000",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "1,377 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/1wyjK9BnRpsvjvFQ2_vebx1-eHi7dcobD?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-079",
+    "address": "1100 Sycamore Dr",
+    "city": "MWC, OK",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,550",
+    "downPayment": "$7,500",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "Completing End Of July 4/1 Full ARV",
+    "images": [
+      "https://listings.flowphotos.com/sites/1100-sycamore-dr-midwest-city-ok-73110-27208125"
+    ]
+  },
+  {
+    "id": "HRH-080",
+    "address": "1324 NW 98th St",
+    "city": "OKC, OK",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$7,500",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "Completing End Of July 4/1 Full ARV",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-082",
+    "address": "1116 Hickory Ln",
+    "city": "MWC, OK",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,550",
+    "downPayment": "$7,500",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "Completing End Of July 4/1 Full ARV",
+    "images": [
+      "Coming Soon!"
+    ]
+  },
+  {
+    "id": "HRH-107",
+    "address": "4708 NW Cheryl Blvd",
+    "city": "Lawton, OK 73505",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,495",
+    "downPayment": "$10,000",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "Condition: Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/4708-NW-Cheryl-Blvd-Lawton-OK-73505/49466105_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-017",
+    "address": "9901 Waverly Ave",
+    "city": "The Village",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,350",
+    "downPayment": "$3,500",
+    "purchasePrice": "$165,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "\"The agents goes and gets their own photos for marketing.\""
+    ]
+  },
+  {
+    "id": "HRH-143",
+    "address": "3119 S Miles Ave",
+    "city": "El Reno, OK 73036",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,550",
+    "downPayment": "$8,000",
+    "purchasePrice": "$165,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/3119-SE-16th-St-Oklahoma-City-OK-73115/21994832_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-037",
+    "address": "1040 Sycamore Dr.",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$6,000",
+    "purchasePrice": "$160,000",
+    "status": "Available",
+    "sqft": "1,144 sqft",
+    "images": [
+      "https://drive.google.com/drive/u/1/folders/1SFjiO_Q3oDS_Twrqq2BDQIgBF7Jg5blm"
+    ]
+  },
+  {
+    "id": "HRH-136",
+    "address": "1436 Alan Ln,",
+    "city": "Oklahoma City, OK 73130",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,600",
+    "downPayment": "$10,000",
+    "purchasePrice": "$160,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/1436-Alan-Ln-Midwest-City-OK-73130/22005490_zpid/?utm_campaign=iosappmessage&utm_medium=referral&utm_source=txtshare"
+    ]
+  },
+  {
+    "id": "HRH-171",
+    "address": "413 E Northrup Dr",
+    "city": "MWC, Ok 73110",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$6,500",
+    "purchasePrice": "$160,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/413-E-Northrup-Dr-Midwest-City-OK-73110/21989956_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-007",
+    "address": "1528 NW 4th St",
+    "city": "Oklahoma City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$7,500",
+    "purchasePrice": "$155,000",
+    "status": "Available",
+    "sqft": "Completing 1st week of June.",
+    "images": [
+      "https://listings.flowphotos.com/sites/rnqaplox/unbranded"
+    ]
+  },
+  {
+    "id": "HRH-060",
+    "address": "1409 SE 41st St",
+    "city": "Oklahoma City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,300",
+    "downPayment": "$10,000",
+    "purchasePrice": "$155,000",
+    "status": "Available",
+    "sqft": "828 SqFt / Will be fully remodeled. Available July 1st",
+    "images": [
+      "will follow up"
+    ]
+  },
+  {
+    "id": "HRH-050",
+    "address": "515 E Ercoupe",
+    "city": "Midwest City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,500",
+    "downPayment": "$7,500",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-069",
+    "address": "1416 NW 23rd St",
+    "city": "Lawton, OK",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,295",
+    "downPayment": "$10,000",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "Good (recently remodeled)",
+    "images": [
+      "https://www.zillow.com/homedetails/1416-NW-23rd-St-Lawton-OK-73505/49489773_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-127",
+    "address": "233 E Key Blvd",
+    "city": "Midwest City",
+    "bedrooms": "2",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,395",
+    "downPayment": "$8,000",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://chg-offmarket.vercel.app/deals/ae496a7a-87a3-462a-bac9-8456cc471b8c"
+    ]
+  },
+  {
+    "id": "HRH-055",
+    "address": "12712 Nelson Ave",
+    "city": "Spencer",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,350",
+    "downPayment": "$10,000",
+    "purchasePrice": "$145,000",
+    "status": "Available",
+    "sqft": "902SqFt/ Fully Remodeled Interior and Exterior. Has backyard access. Available June 30th",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-106",
+    "address": "1703 NW Euclid",
+    "city": "Lawton, OK 73507",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,295",
+    "downPayment": "$10,000",
+    "purchasePrice": "$145,000",
+    "status": "Available",
+    "sqft": "Condition: Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/1703-NW-Euclid-Ave-Lawton-OK-73507/49485114_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-129",
+    "address": "3605 SW 36th St",
+    "city": "OKC 73119",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,275",
+    "downPayment": "$10,000",
+    "purchasePrice": "$144,000",
+    "status": "Available",
+    "sqft": "1296 SqFt / will add a split and window unit at signing",
+    "images": [
+      "https://drive.google.com/drive/folders/1EAUoRUeZFkuDomIadlYRoNCUYeF9xq_t?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-115",
+    "address": "9417 N McKinley",
+    "city": "OKC",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,435",
+    "downPayment": "$7,500",
+    "purchasePrice": "$142,500",
+    "status": "Available",
+    "sqft": "Loan Amt: $135,000 | Rate: 9.5% | P&I: $1,135.15 | Taxes: $150.00 | Ins: $150.00 | EMD Req: $2,000",
+    "images": [
+      "https://drive.google.com/drive/folders/1ZtDeX0OIgEXqzPbof2_dhDuUgFKyjm3D?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-166",
+    "address": "2305 NE 20th S",
+    "city": "OKC",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,350",
+    "downPayment": "$7,500",
+    "purchasePrice": "$137,500",
+    "status": "Available",
+    "sqft": "pre marketing it’s not closed yet",
+    "images": [
+      "https://photos.google.com/share/AF1QipP1Lif1IanstVd1sh0JS3QJ7ZzbqDpu1gEOJd1YjmecEfNsa6aMuf6fe5R73ctZoQ?pli=1&key=LUs3UjNwVnhfRGtwWWI5bmtSUDMtblhKQmI5WEZn"
+    ]
+  },
+  {
+    "id": "HRH-038",
+    "address": "1722 NE 20th Street",
+    "city": "Oklahoma City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,275",
+    "downPayment": "$6,000",
+    "purchasePrice": "$135,000",
+    "status": "Available",
+    "sqft": "800 sqft",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-040",
+    "address": "1323 S. Blackwelder Avenue",
+    "city": "Oklahoma City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,275",
+    "downPayment": "$6,500",
+    "purchasePrice": "$135,000",
+    "status": "Available",
+    "sqft": "651 sqft",
+    "images": [
+      "https://drive.google.com/drive/folders/1bLv8ooewSL-olG5d9184RlHzba2CJKJh?usp=sharing"
+    ]
+  },
+  {
+    "id": "HRH-134",
+    "address": "205 NW 40th",
+    "city": "Lawton OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,295",
+    "downPayment": "$10,000",
+    "purchasePrice": "$135,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/205-NW-40th-St-Lawton-OK-73505/49470046_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-135",
+    "address": "713 NW 32nd",
+    "city": "Lawton OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,195",
+    "downPayment": "$10,000",
+    "purchasePrice": "$135,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/713-NW-32nd-St-Lawton-OK-73505/49474599_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-077",
+    "address": "601 SE 35th St",
+    "city": "OKC, OK",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$7,500",
+    "purchasePrice": "$130,000",
+    "status": "Available",
+    "sqft": "Complete - Full ARV",
+    "images": [
+      "Click Here!"
+    ]
+  },
+  {
+    "id": "HRH-132",
+    "address": "1632 NW 48th",
+    "city": "Lawton OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,195",
+    "downPayment": "$10,000",
+    "purchasePrice": "$130,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/1632-NW-48th-St-Lawton-OK-73505/49487508_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-118",
+    "address": "1233 SW 40th",
+    "city": "Oklahoma City, OK 73109",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,250",
+    "downPayment": "$7,500",
+    "purchasePrice": "$120,000",
+    "status": "Available",
+    "sqft": "Could easily convert the garage. Selling as-is. I would also take $83,000 if someone wants to purchase traditional.",
+    "images": [
+      "https://drive.google.com/drive/folders/1Gvr8ctvh0jGjsh-gjZxG5EXHLUNlrMkJ"
+    ]
+  },
+  {
+    "id": "HRH-123",
+    "address": "4204 Cunningham Dr, OKC",
+    "city": "OKC",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,200",
+    "downPayment": "$7,500",
+    "purchasePrice": "$120,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://www.zillow.com/homedetails/4204-Cunningham-Dr-Oklahoma-City-OK-73135/21962925_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-164",
+    "address": "2733 NE Success St OKC, OK 73111",
+    "city": "OKC",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,175",
+    "downPayment": "$5,000",
+    "purchasePrice": "$120,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/11hC_qLPYgMK1tITrAC-s9fR8ELViAmWv"
+    ]
+  },
+  {
+    "id": "HRH-133",
+    "address": "709 SW 45th",
+    "city": "Lawton OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,095",
+    "downPayment": "$10,000",
+    "purchasePrice": "$115,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/709-SW-45th-St-Lawton-OK-73505/49466754_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-165",
+    "address": "1637 Bishop Bobby L Williams OKC, Ok 73111",
+    "city": "OKC",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,150",
+    "downPayment": "$5,000",
+    "purchasePrice": "$115,000",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/1wUreZYRSXhcSVWYCYxJjy2LMB6-3aecA"
+    ]
+  },
+  {
+    "id": "HRH-130",
+    "address": "5325 NW Euclid",
+    "city": "Lawton OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,195",
+    "downPayment": "$10,000",
+    "purchasePrice": "$110,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/5325-NW-Euclid-Ave-Lawton-OK-73505/49470304_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-131",
+    "address": "831 NW 33rd",
+    "city": "Lawton OK 73505",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$995",
+    "downPayment": "$10,000",
+    "purchasePrice": "$100,000",
+    "status": "Available",
+    "sqft": "Good/Remodeled",
+    "images": [
+      "Pictures Coming Soon"
+    ]
+  },
+  {
+    "id": "HRH-012",
+    "address": "1033 SW 97th St",
+    "city": "Oklahoma City",
+    "bedrooms": "5",
+    "bathrooms": "2",
+    "monthlyPayment": "$0",
+    "downPayment": "$0",
+    "purchasePrice": "$0",
+    "status": "Available",
+    "sqft": "While livable this one is definitely a fixer upper. It had a tenant start some of the renovation and messed some stuff up. We're fixing the critical stuff but there is still other issues that need addressed.",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-137",
+    "address": "10313 N McKinley",
+    "city": "OKC",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,650",
+    "downPayment": "$20,000",
+    "purchasePrice": "$0",
+    "status": "Available",
+    "sqft": "",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-138",
+    "address": "7400 Lakewood",
+    "city": "Mustang",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,700",
+    "downPayment": "$20,000",
+    "purchasePrice": "$0",
+    "status": "Available",
+    "sqft": "Has a fully fenceed in horse pasture",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-102",
+    "address": "8805 S Indiana",
+    "city": "OKC",
+    "bedrooms": "5",
+    "bathrooms": "2.5",
+    "monthlyPayment": "$2,700",
+    "downPayment": "$15,000",
+    "purchasePrice": "$270,000",
+    "status": "Available",
+    "sqft": "Ready 8/1",
+    "images": []
+  },
+  {
+    "id": "HRH-028",
+    "address": "4824 Chelsea lane",
+    "city": "Choctaw Oklahoma",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,425",
+    "downPayment": "$15,000",
+    "purchasePrice": "$250,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-030",
+    "address": "1605 Blessing Court",
+    "city": "Norman",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,930",
+    "downPayment": "$12,000",
+    "purchasePrice": "$249,000",
+    "status": "Available",
+    "sqft": "1,071 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-145",
+    "address": "3101 Del Rancho, Del City, Ok 73115",
+    "city": "Del City",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$2,100",
+    "downPayment": "$7,000",
+    "purchasePrice": "$230,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-146",
+    "address": "5408 NW 64th St Warr Acres OK 73122",
+    "city": "Warr Acres",
+    "bedrooms": "7",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,975",
+    "downPayment": "$8,000",
+    "purchasePrice": "$225,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-147",
+    "address": "304 W Campbell Dr, Midwest City, Ok 73110",
+    "city": "Midwest City",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,950",
+    "downPayment": "$7,000",
+    "purchasePrice": "$225,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-149",
+    "address": "2620 SE 46th St OKC, OK",
+    "city": "OKC",
+    "bedrooms": "5",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,850",
+    "downPayment": "$6,500",
+    "purchasePrice": "$205,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-151",
+    "address": "4825 Fairmont Avenue Okc, OK 73129",
+    "city": "OKC",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,695",
+    "downPayment": "$6,000",
+    "purchasePrice": "$195,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-152",
+    "address": "4613 Cinderella Dr Okc Ok 73129",
+    "city": "OKC",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,675",
+    "downPayment": "$6,500",
+    "purchasePrice": "$190,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-016",
+    "address": "4608 Meadowoak Dr",
+    "city": "Midwest City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,150",
+    "downPayment": "$5,000",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-153",
+    "address": "621 Lloyd Ave MWC, OK 73130",
+    "city": "Midwest City",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,675",
+    "downPayment": "$6,500",
+    "purchasePrice": "$185,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-039",
+    "address": "3721 Parkwoods Lane",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,625",
+    "downPayment": "$7,000",
+    "purchasePrice": "$178,000",
+    "status": "Available",
+    "sqft": "1,266 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-047",
+    "address": "316 E. Harmon Drive",
+    "city": "Midwest City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,525",
+    "downPayment": "$7,000",
+    "purchasePrice": "$175,000",
+    "status": "Available",
+    "sqft": "1,212 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-154",
+    "address": "637 Royal Ave, Midwest City, Ok 73130",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,600",
+    "downPayment": "$6,500",
+    "purchasePrice": "$175,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-041",
+    "address": "1617 Cynthia Drive",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$7,000",
+    "purchasePrice": "$170,000",
+    "status": "Available",
+    "sqft": "1,161 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-015",
+    "address": "3125 Dentwood Ter",
+    "city": "Del City",
+    "bedrooms": "3",
+    "bathrooms": "0",
+    "monthlyPayment": "$1,150",
+    "downPayment": "$3,500",
+    "purchasePrice": "$165,000",
+    "status": "Available",
+    "sqft": "Getting cleaned out",
+    "images": []
+  },
+  {
+    "id": "HRH-042",
+    "address": "413 E. Northrup Drive",
+    "city": "Midwest City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$6,500",
+    "purchasePrice": "$160,000",
+    "status": "Available",
+    "sqft": "800 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-157",
+    "address": "3512 Brookside Dr MWC, Ok 73110",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$6,000",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-158",
+    "address": "2532 SE 47th St Okc, Ok 73129",
+    "city": "OKC",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$6,000",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-159",
+    "address": "9604 NE 11th St MWC, OK 73130",
+    "city": "Midwest City",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,425",
+    "downPayment": "$5,500",
+    "purchasePrice": "$150,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-160",
+    "address": "2220 S. Air Depot Blvd MWC, Ok 73110",
+    "city": "Midwest City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,400",
+    "downPayment": "$5,500",
+    "purchasePrice": "$145,000",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-034",
+    "address": "2421 NW Jeannes Trl",
+    "city": "Del City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,397",
+    "downPayment": "$6,000",
+    "purchasePrice": "$135,000",
+    "status": "Available",
+    "sqft": "825 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-011",
+    "address": "",
+    "city": "Edmond",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,750",
+    "downPayment": "$10,000",
+    "purchasePrice": "$0",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-010",
+    "address": "1705 S Dillie Ave",
+    "city": "El Reno",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$0",
+    "downPayment": "$0",
+    "purchasePrice": "$0",
+    "status": "Available",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-021",
+    "address": "4225 N Reeder Ave",
+    "city": "Oklahoma City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$7,500",
+    "purchasePrice": "$220,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "\"The agents goes and gets their own photos for marketing.\""
+    ]
+  },
+  {
+    "id": "HRH-112",
+    "address": "2517 SW 65th",
+    "city": "OKC 73159",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,960",
+    "downPayment": "$7,500",
+    "purchasePrice": "$205,000",
+    "status": "Sold",
+    "sqft": "Zip: 73159 | Loan Amt: $197,500 | Rate: 9.5% | P&I: $1,660.00 | Taxes: $150.00 | Ins: $150.00 | EMD Req: $2,000",
+    "images": [
+      "https://www.zillow.com/homedetails/2517-SW-65th-St-Oklahoma-City-OK-73159/21904657_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-052",
+    "address": "925 N Park",
+    "city": "Shawnee",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,800",
+    "downPayment": "$12,000",
+    "purchasePrice": "$195,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-074",
+    "address": "2113 SW 77th St, Oklahoma City, OK 73159",
+    "city": "OK 73159",
+    "bedrooms": "3",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,900",
+    "downPayment": "$10,000",
+    "purchasePrice": "$195,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/1pYtuiF-0_Q8HF4Q3rEmqmzcgyrx0mzML?usp=drive_link"
+    ]
+  },
+  {
+    "id": "HRH-031",
+    "address": "2625 SW 52nd St, Oklahoma City",
+    "city": "OK 73119",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/1N4GSTkdQlijTWiLspaxpMEYhhkZWKE3X?usp=drive_link"
+    ]
+  },
+  {
+    "id": "HRH-033",
+    "address": "2729 SW 60th St, Oklahoma City",
+    "city": "OK 73159",
+    "bedrooms": "4",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,750",
+    "downPayment": "$10,000",
+    "purchasePrice": "$185,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "https://drive.google.com/drive/folders/1_g8iViaIikq_lzdAnADcSFhyzoJT54lN"
+    ]
+  },
+  {
+    "id": "HRH-071",
+    "address": "549 E Ercoupe Dr",
+    "city": "Midwest City, OK",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,395",
+    "downPayment": "$10,000",
+    "purchasePrice": "$180,000",
+    "status": "Sold",
+    "sqft": "Good (recently remodeled)",
+    "images": [
+      "https://www.zillow.com/homedetails/549-E-Ercoupe-Dr-Midwest-City-OK-73110/21989424_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-070",
+    "address": "4901 S Rhode Island Ave",
+    "city": "Oklahoma City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,395",
+    "downPayment": "$10,000",
+    "purchasePrice": "$165,000",
+    "status": "Sold",
+    "sqft": "Good (recently remodeled)",
+    "images": [
+      "https://www.zillow.com/homedetails/4901-S-Rhode-Island-Ave-Oklahoma-City-OK-73129/21894116_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-048",
+    "address": "520 E Curtis",
+    "city": "Midwest City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,500",
+    "downPayment": "$7,500",
+    "purchasePrice": "$155,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-051",
+    "address": "508 E Fairchild",
+    "city": "Midwest City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,500",
+    "downPayment": "$7,500",
+    "purchasePrice": "$155,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": [
+      "asking"
+    ]
+  },
+  {
+    "id": "HRH-066",
+    "address": "1524 NE 8th St",
+    "city": "Oklahoma City",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,195",
+    "downPayment": "$10,000",
+    "purchasePrice": "$155,000",
+    "status": "Sold",
+    "sqft": "Good (recently remodeled)",
+    "images": [
+      "https://www.zillow.com/homedetails/1524-NE-8th-St-Oklahoma-City-OK-73117/21841615_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-105",
+    "address": "1502 NW 48th st",
+    "city": "Lawton, OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,295",
+    "downPayment": "$10,000",
+    "purchasePrice": "$150,000",
+    "status": "Sold",
+    "sqft": "Condition: Good/Remodeled",
+    "images": [
+      "Pictures Coming Soon"
+    ]
+  },
+  {
+    "id": "HRH-068",
+    "address": "1905 NW Baldwin Ave",
+    "city": "Lawton, OK",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$1,295",
+    "downPayment": "$10,000",
+    "purchasePrice": "$145,000",
+    "status": "Sold",
+    "sqft": "Good (recently remodeled)",
+    "images": [
+      "https://www.zillow.com/homedetails/1905-NW-Baldwin-Ave-Lawton-OK-73507/49477557_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-109",
+    "address": "2411 NW 35th St",
+    "city": "Lawton, OK 73505",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,195",
+    "downPayment": "$10,000",
+    "purchasePrice": "$125,000",
+    "status": "Sold",
+    "sqft": "Condition: Good/Remodeled",
+    "images": [
+      "https://www.zillow.com/homedetails/2411-NW-35th-St-Lawton-OK-73505/49476016_zpid/?view=public"
+    ]
+  },
+  {
+    "id": "HRH-114",
+    "address": "1541 SW 45th",
+    "city": "OKC 73119",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,060",
+    "downPayment": "$7,500",
+    "purchasePrice": "$105,000",
+    "status": "Sold",
+    "sqft": "Zip: 73119 | SqFt: 720 | Loan Amt: $97,500 | Rate: 9.5% | P&I: $820.00 | Taxes: $120.00 | Ins: $120.00 | EMD Req: $2,000 | Backyard Access: No | Corner Lot: No",
+    "images": [
+      "https://www.zillow.com/homedetails/1541-SW-45th-St-Oklahoma-City-OK-73119/21874295_zpid/"
+    ]
+  },
+  {
+    "id": "HRH-032",
+    "address": "1801 SW 24th St.",
+    "city": "Moore",
+    "bedrooms": "4",
+    "bathrooms": "2",
+    "monthlyPayment": "$2,500",
+    "downPayment": "$12,000",
+    "purchasePrice": "$255,000",
+    "status": "Sold",
+    "sqft": "1,527 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-006",
+    "address": "441 NE 19th Pl",
+    "city": "Newcastle",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$2,100",
+    "downPayment": "$10,000",
+    "purchasePrice": "$230,000",
+    "status": "Sold",
+    "sqft": "2017 Build, has new roof - Turnkey (Occupied until 4/4/26)",
+    "images": []
+  },
+  {
+    "id": "HRH-028",
+    "address": "2121 N. Wilburn Pl.",
+    "city": "Bethany",
+    "bedrooms": "7",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$2,343",
+    "downPayment": "$14,910",
+    "purchasePrice": "$213,000",
+    "status": "Sold",
+    "sqft": "1,453 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-035",
+    "address": "1612 Melinda Lane",
+    "city": "Midwest City",
+    "bedrooms": "5",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,675",
+    "downPayment": "$7,000",
+    "purchasePrice": "$185,000",
+    "status": "Sold",
+    "sqft": "1,446 sqft",
+    "images": []
+  },
+  {
+    "id": "HRH-058",
+    "address": "745 SW 4th Pl, Moore, OK 73160",
+    "city": "Moore",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,800",
+    "downPayment": "$10,000",
+    "purchasePrice": "$180,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-057",
+    "address": "3429 Parker Dr, Oklahoma City, OK 73135",
+    "city": "Oklahoma City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,700",
+    "downPayment": "$10,000",
+    "purchasePrice": "$179,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-008",
+    "address": "5212 N Beaver Ave",
+    "city": "Bethany",
+    "bedrooms": "3",
+    "bathrooms": "1.5",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$7,500",
+    "purchasePrice": "$170,000",
+    "status": "Sold",
+    "sqft": "Completing the 1st week of June.",
+    "images": []
+  },
+  {
+    "id": "HRH-059",
+    "address": "5519 S Rockwood Ave, Oklahoma City, OK 73119",
+    "city": "Oklahoma City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$1,650",
+    "downPayment": "$10,000",
+    "purchasePrice": "$170,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-009",
+    "address": "3621 Teal Dr",
+    "city": "Del City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,450",
+    "downPayment": "$7,500",
+    "purchasePrice": "$150,000",
+    "status": "Sold",
+    "sqft": "Updating floors and other make ready items.",
+    "images": []
+  },
+  {
+    "id": "HRH-075",
+    "address": "708 n choctaw Ave, el Reno",
+    "city": "El Reno",
+    "bedrooms": "4",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,500",
+    "downPayment": "$5,000",
+    "purchasePrice": "$150,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-018",
+    "address": "2316 Mustang St",
+    "city": "Del City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$975",
+    "downPayment": "$3,000",
+    "purchasePrice": "$135,000",
+    "status": "Sold",
+    "sqft": "",
+    "images": []
+  },
+  {
+    "id": "HRH-019",
+    "address": "523 E Douglas Dr",
+    "city": "Midwest City",
+    "bedrooms": "",
+    "bathrooms": "",
+    "monthlyPayment": "$950",
+    "downPayment": "$2,500",
+    "purchasePrice": "$125,000",
+    "status": "Sold",
+    "sqft": "Currently flooring in unfinished, will finish after signed contract",
+    "images": []
+  },
+  {
+    "id": "HRH-029",
+    "address": "407 SE 25th Street",
+    "city": "Oklahoma City",
+    "bedrooms": "3",
+    "bathrooms": "1",
+    "monthlyPayment": "$1,215",
+    "downPayment": "$5,000",
+    "purchasePrice": "$125,000",
+    "status": "Sold",
+    "sqft": "896 sqft",
+    "images": []
+  }
+]
