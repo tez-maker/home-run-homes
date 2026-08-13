@@ -255,29 +255,369 @@
       color: var(--navy-deep);
     }
 
-    .cal-card {
-      margin-top: 1.75rem;
+    /* ─── Typeform-style quiz ─── */
+    .quiz-card {
+      position: relative;
+      margin-top: 1.9rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 18px 46px rgba(7,29,74,0.12);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    /* progress */
+    .progress-track {
+      position: relative;
+      height: 6px;
+      background: #EDE7DC;
+      overflow: hidden;
+    }
+    .progress-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 0%;
+      background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%);
+      border-radius: 0 4px 4px 0;
+      transition: width 0.45s cubic-bezier(0.22,0.61,0.36,1);
+    }
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 1.15rem 0;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .progress-meta .pct { color: var(--navy); }
+
+    /* stage */
+    .quiz-stage {
+      position: relative;
+      padding: 1.15rem 1.15rem 1.5rem;
+      min-height: 22rem;
+      display: grid;
+      align-items: start;
+      transition: min-height 0.35s ease;
+    }
+
+    .step {
+      grid-area: 1 / 1;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(26px);
+      transition: opacity 0.38s ease, transform 0.42s cubic-bezier(0.22,0.61,0.36,1), visibility 0.38s;
+      pointer-events: none;
+    }
+    .step.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .step.is-exit-up {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-26px);
+      pointer-events: none;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.5rem;
+    }
+    .step-num .arrow { color: var(--gold); }
+
+    .step h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 6.6vw, 2.5rem);
+      line-height: 1.03;
+      color: var(--navy);
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.008em;
+      margin-bottom: 0.4rem;
+    }
+    .step .hint {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+    .step .hint.gold {
+      color: #8A6A16;
+      background: rgba(232,178,58,0.14);
+      border-left: 3px solid var(--gold);
+      padding: 0.5rem 0.7rem;
+      border-radius: 0 6px 6px 0;
+      font-weight: 700;
+    }
+
+    /* text inputs */
+    .field {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--off-white);
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.05rem;
+      min-height: 3.6rem;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .field::placeholder { color: #A2A9B6; font-weight: 500; }
+    .field:focus {
+      outline: none;
+      background: var(--white);
+      border-color: var(--navy);
+      box-shadow: 0 0 0 4px rgba(10,42,107,0.12);
+    }
+    .field.invalid {
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(200,16,46,0.12);
+    }
+
+    .err {
+      display: none;
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+    .err.show { display: block; }
+
+    /* choice buttons */
+    .choices {
+      display: grid;
+      gap: 0.6rem;
+    }
+    .choice {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      min-height: 3.5rem;
+      padding: 0.85rem 1rem;
+      background: var(--off-white);
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .choice .key {
+      flex: 0 0 auto;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 7px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: var(--muted);
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .choice:hover, .choice:focus-visible {
+      outline: none;
+      border-color: var(--navy);
+      background: var(--white);
+      transform: translateY(-1px);
+    }
+    .choice:hover .key, .choice:focus-visible .key {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--gold);
+    }
+    .choice.selected {
+      border-color: var(--red);
+      background: #FFF4F5;
+    }
+    .choice.selected .key {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+    .choices.two-up { grid-template-columns: 1fr 1fr; }
+    .choices.two-up .choice { justify-content: center; }
+
+    /* nav row */
+    .step-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-top: 1.15rem;
+    }
+    .btn-next {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      flex: 1 1 auto;
+      min-height: 3.5rem;
+      padding: 0.9rem 1.4rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 1.08rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 9px 22px rgba(200,16,46,0.28);
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+    .btn-next:hover, .btn-next:focus-visible { background: var(--red-hover); transform: translateY(-1px); }
+    .btn-next[disabled] { opacity: 0.6; cursor: default; transform: none; }
+    .btn-back {
+      flex: 0 0 auto;
+      min-height: 3.5rem;
+      padding: 0.9rem 1.05rem;
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 800;
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-back:hover, .btn-back:focus-visible { border-color: var(--navy); color: var(--navy); outline: none; }
+    .enter-tip {
+      margin-top: 0.7rem;
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+    .enter-tip kbd {
       background: var(--off-white);
       border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 12px 34px rgba(7,29,74,0.08);
-    }
-    .cal-head {
-      background: var(--navy);
-      color: var(--white);
-      padding: 0.85rem 1rem;
-      font-size: 0.78rem;
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      padding: 0.05rem 0.35rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
       font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      color: var(--navy);
     }
-    .cal-card iframe {
-      width: 100%;
-      height: 1000px;
-      border: none;
-      display: block;
-      background: var(--white);
+
+    /* review + submit */
+    .review {
+      display: grid;
+      gap: 0.35rem;
+      background: var(--off-white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .review div {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+    .review dt, .review .k { color: var(--muted); font-weight: 700; }
+    .review .v { color: var(--navy); font-weight: 800; text-align: right; }
+
+    .spinner {
+      width: 1.15rem;
+      height: 1.15rem;
+      border: 2.5px solid rgba(255,255,255,0.35);
+      border-top-color: var(--white);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    .btn-next.loading .spinner { display: block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* thank you */
+    .thanks { text-align: center; padding: 1rem 0 0.5rem; }
+    .thanks .check-ring {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin: 0 auto 1.2rem;
+      border-radius: 50%;
+      background: rgba(22,163,74,0.1);
+      display: grid;
+      place-items: center;
+      animation: pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    .thanks .check-ring svg { width: 3rem; height: 3rem; }
+    .thanks .check-ring path {
+      stroke: #16A34A;
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: draw 0.55s 0.22s ease forwards;
+    }
+    @keyframes pop {
+      from { transform: scale(0.4); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .thanks h3 {
+      font-size: clamp(1.9rem, 7vw, 2.7rem);
+      margin-bottom: 0.6rem;
+    }
+    .thanks p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 26rem;
+      margin: 0 auto;
+    }
+    .thanks .next-steps {
+      margin-top: 1.3rem;
+      display: inline-grid;
+      gap: 0.5rem;
+      text-align: left;
+      background: var(--off-white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.9rem 1.1rem;
+    }
+    .thanks .next-steps span {
+      display: flex;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    .thanks .next-steps .n {
+      flex: 0 0 auto;
+      width: 1.3rem; height: 1.3rem;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      display: grid; place-items: center;
+      font-size: 0.72rem; font-weight: 900;
     }
 
     .assure {
@@ -390,6 +730,19 @@
       .top { padding: 3.25rem 0 3.5rem; }
       section.pad { padding: 4rem 0; }
       .assure { max-width: 34rem; }
+      .quiz-stage { padding: 1.85rem 2.25rem 2.1rem; min-height: 24rem; }
+      .progress-meta { padding: 0.85rem 2.25rem 0; }
+      .step .hint { margin-bottom: 1.35rem; }
+      .btn-next { flex: 0 0 auto; min-width: 12rem; }
+      .step-nav { justify-content: flex-end; flex-direction: row-reverse; }
+      .step[data-type="choice"] .step-nav { justify-content: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .step { transition: opacity 0.15s ease; transform: none !important; }
+      .progress-fill { transition: width 0.15s linear; }
+      .thanks .check-ring { animation: none; }
+      .thanks .check-ring path { animation: none; stroke-dashoffset: 0; }
     }
   </style>
 </head>
@@ -404,7 +757,7 @@
     <!-- ═══════════ STEP 1: WATCH ═══════════ -->
     <section class="top">
       <div class="container">
-        <span class="eyebrow">Step 1 of 2 &middot; Watch the Training</span>
+        <span class="eyebrow">Step 1 of 2 &middot; Watch, Then Answer a Few Questions</span>
         <h1>You&rsquo;re In! <span class="gold">Watch This First</span> &#128273;</h1>
         <p class="subhead">Watch to the end &mdash; this is the exact process families in OKC are using to buy homes without the bank.</p>
 
@@ -423,29 +776,19 @@
                 <svg viewBox="0 0 24 24" fill="#071D4A"><path d="M8 5v14l11-7z"/></svg>
               </span>
               <span class="ph-title">Video Coming Soon</span>
-              <span class="ph-sub">The training is being finalized right now. In the meantime, you can go straight to a free call below and we&rsquo;ll walk you through it personally.</span>
+              <span class="ph-sub">The training is being finalized right now. In the meantime, answer a few quick questions below and we&rsquo;ll walk you through your options personally.</span>
             </div>
           </div>
         </div>
-        <p class="video-caption">Best watched with sound on &mdash; about 15 minutes.</p>
+        <p class="video-caption">Best watched with sound on &mdash; about 15 minutes. Then answer the questions below.</p>
       </div>
     </section>
 
-    <!-- ═══════════ STEP 2: BOOK THE CALL ═══════════ -->
-    <section class="pad booking" id="book">
+    <!-- ═══════════ STEP 2: QUALIFICATION FORM ═══════════ -->
+    <section class="pad booking" id="qualify">
       <div class="container narrow">
-        <h2>Ready to See What You Qualify For?</h2>
-        <p class="lede">It&rsquo;s a free, no-pressure call &mdash; we&rsquo;ll listen to your situation and show you your options.</p>
-
-        <div style="margin-top:1.6rem;">
-          <a class="btn" href="#calendar">Book My Free Call &rarr;</a>
-        </div>
-
-        <ul class="assure">
-          <li><span class="tick">&#10003;</span><span>We start by listening &mdash; your income, your timeline, where you want to live.</span></li>
-          <li><span class="tick">&#10003;</span><span>We explain the options honestly, including the ones that cost you nothing.</span></li>
-          <li><span class="tick">&#10003;</span><span>If now isn&rsquo;t the right time, we&rsquo;ll tell you what to work on first.</span></li>
-        </ul>
+        <h2>See What You Can Afford</h2>
+        <p class="lede">Answer a few quick questions and a member of our team will reach out with your options.</p>
 
         <div class="badges">
           <span class="badge"><span class="dot"></span>No Banks Needed</span>
@@ -453,19 +796,164 @@
           <span class="badge"><span class="dot"></span>Rent-to-Own &amp; Owner Financing</span>
         </div>
 
-        <div class="cal-card" id="calendar">
-          <div class="cal-head">Pick a time that works for you</div>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/booking/aAoNfRxmSgJXgnh67RK6"
-            scrolling="no"
-            id="aAoNfRxmSgJXgnh67RK6_training"
-            title="Book Your Free Call">
-          </iframe>
+        <!-- ── Typeform-style multi-step form ── -->
+        <div class="quiz-card" id="quiz">
+          <div class="progress-track"><div class="progress-fill" id="bar"></div></div>
+          <div class="progress-meta">
+            <span id="stepLabel">Question 1 of 8</span>
+            <span class="pct" id="pctLabel">0% complete</span>
+          </div>
+
+          <div class="quiz-stage" id="stage">
+
+            <!-- 1. First name -->
+            <div class="step is-active" data-step="0" data-key="first_name" data-type="text">
+              <span class="step-num">01 <span class="arrow">&rarr;</span></span>
+              <h3>What&rsquo;s your first name?</h3>
+              <p class="hint">So we know what to call you.</p>
+              <input class="field" type="text" inputmode="text" autocomplete="given-name" placeholder="Type your first name" data-input aria-label="First name" />
+              <p class="err" data-err>Please enter your first name.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-next" data-next>OK <span aria-hidden="true">&rarr;</span><span class="spinner"></span></button>
+              </div>
+              <p class="enter-tip">Press <kbd>Enter</kbd> to continue</p>
+            </div>
+
+            <!-- 2. Age -->
+            <div class="step" data-step="1" data-key="age" data-type="number">
+              <span class="step-num">02 <span class="arrow">&rarr;</span></span>
+              <h3>How old are you?</h3>
+              <p class="hint gold">Must be 18+ to purchase.</p>
+              <input class="field" type="number" inputmode="numeric" min="18" max="110" placeholder="Enter your age" data-input aria-label="Age" />
+              <p class="err" data-err>Please enter your age (18 or older).</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+                <button type="button" class="btn-next" data-next>OK <span aria-hidden="true">&rarr;</span><span class="spinner"></span></button>
+              </div>
+              <p class="enter-tip">Press <kbd>Enter</kbd> to continue</p>
+            </div>
+
+            <!-- 3. Timeline -->
+            <div class="step" data-step="2" data-key="move_timeline" data-type="choice">
+              <span class="step-num">03 <span class="arrow">&rarr;</span></span>
+              <h3>How soon would you like to move?</h3>
+              <p class="hint">Pick the closest answer &mdash; nothing is locked in.</p>
+              <div class="choices">
+                <button type="button" class="choice" data-choice="ASAP"><span class="key">A</span>ASAP</button>
+                <button type="button" class="choice" data-choice="1-3 months"><span class="key">B</span>1-3 months</button>
+                <button type="button" class="choice" data-choice="3-6 months"><span class="key">C</span>3-6 months</button>
+                <button type="button" class="choice" data-choice="6+ months"><span class="key">D</span>6+ months</button>
+                <button type="button" class="choice" data-choice="Just exploring"><span class="key">E</span>Just exploring</button>
+              </div>
+              <p class="err" data-err>Please choose an option.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- 4. Down payment -->
+            <div class="step" data-step="3" data-key="down_payment" data-type="choice">
+              <span class="step-num">04 <span class="arrow">&rarr;</span></span>
+              <h3>Have you saved any money for a down payment? If so, how much?</h3>
+              <p class="hint">An honest answer helps us point you to the right homes.</p>
+              <div class="choices">
+                <button type="button" class="choice" data-choice="Less than $3,000"><span class="key">A</span>Less than $3,000</button>
+                <button type="button" class="choice" data-choice="$3,000 - $5,000"><span class="key">B</span>$3,000 - $5,000</button>
+                <button type="button" class="choice" data-choice="$5,000 - $10,000"><span class="key">C</span>$5,000 - $10,000</button>
+                <button type="button" class="choice" data-choice="$10,000 - $15,000"><span class="key">D</span>$10,000 - $15,000</button>
+                <button type="button" class="choice" data-choice="$15,000+"><span class="key">E</span>$15,000+</button>
+              </div>
+              <p class="err" data-err>Please choose an option.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- 5. Monthly budget -->
+            <div class="step" data-step="4" data-key="monthly_budget" data-type="choice">
+              <span class="step-num">05 <span class="arrow">&rarr;</span></span>
+              <h3>What can you afford to pay monthly?</h3>
+              <p class="hint">Think about what fits comfortably, not the absolute maximum.</p>
+              <div class="choices">
+                <button type="button" class="choice" data-choice="Under $1,000"><span class="key">A</span>Under $1,000</button>
+                <button type="button" class="choice" data-choice="$1,000 - $1,500"><span class="key">B</span>$1,000 - $1,500</button>
+                <button type="button" class="choice" data-choice="$1,500 - $2,000"><span class="key">C</span>$1,500 - $2,000</button>
+                <button type="button" class="choice" data-choice="$2,000 - $2,500"><span class="key">D</span>$2,000 - $2,500</button>
+                <button type="button" class="choice" data-choice="$2,500+"><span class="key">E</span>$2,500+</button>
+              </div>
+              <p class="err" data-err>Please choose an option.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- 6. Evictions -->
+            <div class="step" data-step="5" data-key="evictions" data-type="choice">
+              <span class="step-num">06 <span class="arrow">&rarr;</span></span>
+              <h3>Have you had any evictions in the last 3 years?</h3>
+              <p class="hint">Either answer is okay &mdash; we just need the full picture.</p>
+              <div class="choices two-up">
+                <button type="button" class="choice" data-choice="Yes"><span class="key">Y</span>Yes</button>
+                <button type="button" class="choice" data-choice="No"><span class="key">N</span>No</button>
+              </div>
+              <p class="err" data-err>Please choose an option.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- 7. Phone -->
+            <div class="step" data-step="6" data-key="phone" data-type="tel">
+              <span class="step-num">07 <span class="arrow">&rarr;</span></span>
+              <h3>What&rsquo;s the best phone number to reach you?</h3>
+              <p class="hint">A real person from our team will call or text &mdash; no robocalls.</p>
+              <input class="field" type="tel" inputmode="tel" autocomplete="tel" placeholder="(405) 555-0123" data-input aria-label="Phone number" />
+              <p class="err" data-err>Please enter a valid 10-digit phone number.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+                <button type="button" class="btn-next" data-next>OK <span aria-hidden="true">&rarr;</span><span class="spinner"></span></button>
+              </div>
+              <p class="enter-tip">Press <kbd>Enter</kbd> to continue</p>
+            </div>
+
+            <!-- 8. Email + submit -->
+            <div class="step" data-step="7" data-key="email" data-type="email">
+              <span class="step-num">08 <span class="arrow">&rarr;</span></span>
+              <h3>What&rsquo;s your email?</h3>
+              <p class="hint">Last question. We&rsquo;ll send your options here.</p>
+              <input class="field" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-input aria-label="Email address" />
+              <p class="err" data-err>Please enter a valid email address.</p>
+              <div class="step-nav">
+                <button type="button" class="btn-back" data-back>&larr; Back</button>
+                <button type="button" class="btn-next" data-next>Submit My Answers <span aria-hidden="true">&rarr;</span><span class="spinner"></span></button>
+              </div>
+              <p class="enter-tip">Your information is never sold or shared.</p>
+            </div>
+
+            <!-- 9. Thank you -->
+            <div class="step" data-step="8" data-final>
+              <div class="thanks">
+                <div class="check-ring">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+                </div>
+                <h3>Thank You!</h3>
+                <p>A member of our team will be reaching out shortly.</p>
+                <div class="next-steps">
+                  <span><span class="n">1</span>We review your answers and pull the options that fit.</span>
+                  <span><span class="n">2</span>We reach out by phone or text at the number you gave us.</span>
+                  <span><span class="n">3</span>No pressure &mdash; if the timing isn&rsquo;t right, we&rsquo;ll say so.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <p style="margin-top:1rem;font-size:0.82rem;color:var(--muted);">
-          Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/aAoNfRxmSgJXgnh67RK6" style="color:var(--red);font-weight:800;">Open the booking page here</a>.
-        </p>
+        <ul class="assure">
+          <li><span class="tick">&#10003;</span><span>We start by listening &mdash; your income, your timeline, where you want to live.</span></li>
+          <li><span class="tick">&#10003;</span><span>We explain the options honestly, including the ones that cost you nothing.</span></li>
+          <li><span class="tick">&#10003;</span><span>If now isn&rsquo;t the right time, we&rsquo;ll tell you what to work on first.</span></li>
+        </ul>
       </div>
     </section>
 
@@ -473,7 +961,7 @@
     <section class="pad notready">
       <div class="container narrow">
         <h2>Not Ready Yet? <span class="gold">That&rsquo;s Okay.</span></h2>
-        <p>Not ready to buy yet? No time to watch the whole training? No problem &mdash; join our free community and learn more about us at your own pace.</p>
+        <p>In the meantime, join our free community. Not ready to buy yet? No time to watch the whole training? No problem &mdash; learn more about us at your own pace.</p>
         <a class="btn ghost" href="https://www.facebook.com/groups/renttoownokc" target="_blank" rel="noopener">Join Our Free Community &rarr;</a>
         <p class="fine">Real questions, real answers, and updates on homes as they come available in the OKC metro.</p>
       </div>
@@ -489,7 +977,312 @@
     </div>
   </footer>
 
-  <!-- GHL Booking Widget Script -->
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  <!-- ══════════════════════════════════════════════════
+       Qualification form logic (vanilla JS, no libraries)
+       ══════════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ---------------------------------------------------------------
+       SUBMISSION ENDPOINTS
+       PRIMARY: set this to the real GHL inbound-webhook URL when ready.
+         In GHL: Automation > Workflows > add trigger "Inbound Webhook",
+         copy the URL it gives you and paste it below. It looks like:
+         https://services.leadconnectorhq.com/hooks/<locationId>/webhook-trigger/<uuid>
+       BACKUP: always posts to our own server so no lead is ever lost.
+       --------------------------------------------------------------- */
+    var GHL_WEBHOOK_URL = '';                 // <-- paste GHL inbound webhook URL here
+    var BACKUP_URL      = '/api/qualify';     // our own server (server.mjs)
+
+    var stage     = document.getElementById('stage');
+    if (!stage) return;
+    var steps     = Array.prototype.slice.call(stage.querySelectorAll('.step'));
+    var bar       = document.getElementById('bar');
+    var stepLabel = document.getElementById('stepLabel');
+    var pctLabel  = document.getElementById('pctLabel');
+    var quizCard  = document.getElementById('quiz');
+
+    var QUESTION_COUNT = steps.filter(function (s) { return !s.hasAttribute('data-final'); }).length;
+    var current = 0;
+    var answers = {};
+    var submitted = false;
+
+    /* ---------- progress ---------- */
+    function updateProgress() {
+      var answered = Object.keys(answers).length;
+      var pct = Math.round((answered / QUESTION_COUNT) * 100);
+      if (pct > 100) pct = 100;
+      bar.style.width = pct + '%';
+      pctLabel.textContent = pct + '% complete';
+      if (current >= QUESTION_COUNT) {
+        stepLabel.textContent = 'All done';
+      } else {
+        stepLabel.textContent = 'Question ' + (current + 1) + ' of ' + QUESTION_COUNT;
+      }
+    }
+
+    /* ---------- step transitions ---------- */
+    function goTo(index, direction) {
+      if (index < 0 || index >= steps.length) return;
+      var outgoing = steps[current];
+      var incoming = steps[index];
+
+      outgoing.classList.remove('is-active');
+      if (direction === 'forward') {
+        outgoing.classList.add('is-exit-up');
+      } else {
+        outgoing.classList.remove('is-exit-up');
+      }
+
+      // reset incoming start position based on direction
+      incoming.classList.remove('is-exit-up');
+      if (direction === 'back') {
+        incoming.classList.add('is-exit-up');
+        // force reflow so the transition runs from the correct offset
+        void incoming.offsetHeight;
+        incoming.classList.remove('is-exit-up');
+      }
+      incoming.classList.add('is-active');
+
+      current = index;
+      updateProgress();
+      focusStep(incoming);
+      keepInView();
+    }
+
+    function focusStep(step) {
+      var input = step.querySelector('[data-input]');
+      if (!input) return;
+      // Avoid yanking the mobile keyboard open on first paint
+      if (window.matchMedia('(min-width: 860px)').matches) {
+        setTimeout(function () { input.focus(); }, 220);
+      }
+    }
+
+    function keepInView() {
+      var rect = quizCard.getBoundingClientRect();
+      if (rect.top < 0 || rect.top > window.innerHeight * 0.55) {
+        var y = rect.top + window.pageYOffset - 20;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+
+    /* ---------- validation ---------- */
+    function showError(step, message) {
+      var err = step.querySelector('[data-err]');
+      var input = step.querySelector('[data-input]');
+      if (message && err) { err.textContent = message; }
+      if (err) err.classList.add('show');
+      if (input) input.classList.add('invalid');
+    }
+    function clearError(step) {
+      var err = step.querySelector('[data-err]');
+      var input = step.querySelector('[data-input]');
+      if (err) err.classList.remove('show');
+      if (input) input.classList.remove('invalid');
+    }
+
+    function digitsOf(value) { return String(value).replace(/\D/g, ''); }
+
+    function validate(step) {
+      var type  = step.getAttribute('data-type');
+      var input = step.querySelector('[data-input]');
+      if (!input) return null;
+      var value = String(input.value || '').trim();
+
+      if (type === 'text') {
+        if (value.length < 2) { showError(step, 'Please enter your first name.'); return null; }
+        return value.charAt(0).toUpperCase() + value.slice(1);
+      }
+      if (type === 'number') {
+        var age = parseInt(value, 10);
+        if (isNaN(age)) { showError(step, 'Please enter your age.'); return null; }
+        if (age < 18)   { showError(step, 'You must be 18 or older to purchase a home.'); return null; }
+        if (age > 110)  { showError(step, 'Please enter a valid age.'); return null; }
+        return String(age);
+      }
+      if (type === 'tel') {
+        var d = digitsOf(value);
+        if (d.length === 11 && d.charAt(0) === '1') { d = d.slice(1); }
+        if (d.length !== 10) { showError(step, 'Please enter a valid 10-digit phone number.'); return null; }
+        return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+      }
+      if (type === 'email') {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+          showError(step, 'Please enter a valid email address.'); return null;
+        }
+        return value.toLowerCase();
+      }
+      return value || null;
+    }
+
+    /* ---------- advance ---------- */
+    function advance(step) {
+      var isLastQuestion = (current === QUESTION_COUNT - 1);
+      var key = step.getAttribute('data-key');
+      var value = validate(step);
+      if (value === null) return;
+
+      clearError(step);
+      answers[key] = value;
+      updateProgress();
+
+      if (isLastQuestion) {
+        submit(step);
+      } else {
+        goTo(current + 1, 'forward');
+      }
+    }
+
+    /* ---------- wire up inputs & buttons ---------- */
+    steps.forEach(function (step) {
+      var nextBtn = step.querySelector('[data-next]');
+      var backBtn = step.querySelector('[data-back]');
+      var input   = step.querySelector('[data-input]');
+      var choices = Array.prototype.slice.call(step.querySelectorAll('[data-choice]'));
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () { advance(step); });
+      }
+      if (backBtn) {
+        backBtn.addEventListener('click', function () { goTo(current - 1, 'back'); });
+      }
+      if (input) {
+        input.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') { e.preventDefault(); advance(step); }
+        });
+        input.addEventListener('input', function () { clearError(step); });
+      }
+
+      choices.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          choices.forEach(function (b) { b.classList.remove('selected'); });
+          btn.classList.add('selected');
+          clearError(step);
+          answers[step.getAttribute('data-key')] = btn.getAttribute('data-choice');
+          updateProgress();
+          setTimeout(function () {
+            if (current === QUESTION_COUNT - 1) { submit(step); }
+            else { goTo(current + 1, 'forward'); }
+          }, 260);
+        });
+      });
+    });
+
+    /* keyboard shortcuts for choice steps (A-E / Y / N) */
+    document.addEventListener('keydown', function (e) {
+      var step = steps[current];
+      if (!step || step.getAttribute('data-type') !== 'choice') return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      var pressed = String(e.key || '').toUpperCase();
+      var match = step.querySelector('[data-choice] .key');
+      if (!match) return;
+      var all = Array.prototype.slice.call(step.querySelectorAll('[data-choice]'));
+      for (var i = 0; i < all.length; i++) {
+        var keyEl = all[i].querySelector('.key');
+        if (keyEl && keyEl.textContent.trim().toUpperCase() === pressed) {
+          e.preventDefault();
+          all[i].click();
+          return;
+        }
+      }
+    });
+
+    /* ---------- submission ---------- */
+    function buildSummary() {
+      return [
+        'Qualification form — See What You Can Afford',
+        'Name: '            + (answers.first_name    || ''),
+        'Age: '             + (answers.age           || ''),
+        'Move Timeline: '   + (answers.move_timeline || ''),
+        'Down Payment Saved: ' + (answers.down_payment  || ''),
+        'Monthly Budget: '  + (answers.monthly_budget|| ''),
+        'Evictions Last 3 Years: ' + (answers.evictions || ''),
+        'Phone: '           + (answers.phone         || ''),
+        'Email: '           + (answers.email         || '')
+      ].join('\n');
+    }
+
+    function buildPayload() {
+      var summary = buildSummary();
+      return {
+        firstName: answers.first_name || '',
+        first_name: answers.first_name || '',
+        name: answers.first_name || '',
+        phone: answers.phone || '',
+        email: answers.email || '',
+        age: answers.age || '',
+        move_timeline: answers.move_timeline || '',
+        down_payment: answers.down_payment || '',
+        monthly_budget: answers.monthly_budget || '',
+        evictions: answers.evictions || '',
+        'Age': answers.age || '',
+        'Move Timeline': answers.move_timeline || '',
+        'Down Payment Saved': answers.down_payment || '',
+        'Monthly Budget': answers.monthly_budget || '',
+        'Evictions Last 3 Years': answers.evictions || '',
+        message: summary,
+        notes: summary,
+        source: 'Training Funnel — Qualification Form (homerunhomes.casa/training-watch)',
+        tags: ['training-funnel', 'qualification-form'],
+        page_url: window.location.href,
+        submitted_at: new Date().toISOString()
+      };
+    }
+
+    function postJSON(url, payload) {
+      return fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    function submit(step) {
+      if (submitted) return;
+      submitted = true;
+
+      var btn = step.querySelector('[data-next]');
+      if (btn) {
+        btn.classList.add('loading');
+        btn.setAttribute('disabled', 'disabled');
+        btn.firstChild.nodeValue = 'Sending ';
+      }
+
+      var payload = buildPayload();
+      var attempts = [];
+
+      if (GHL_WEBHOOK_URL) {
+        attempts.push(postJSON(GHL_WEBHOOK_URL, payload).catch(function () { return null; }));
+      }
+      attempts.push(postJSON(BACKUP_URL, payload).catch(function () { return null; }));
+
+      // Always land on the thank-you screen; never trap the user on a failure.
+      var done = false;
+      function finish() {
+        if (done) return;
+        done = true;
+        if (typeof fbq === 'function') {
+          try { fbq('track', 'CompleteRegistration'); } catch (e) {}
+        }
+        goTo(steps.length - 1, 'forward');
+        bar.style.width = '100%';
+        pctLabel.textContent = '100% complete';
+      }
+
+      var timeout = setTimeout(finish, 4000);
+      Promise.all(attempts).then(function () {
+        clearTimeout(timeout);
+        finish();
+      }).catch(function () {
+        clearTimeout(timeout);
+        finish();
+      });
+    }
+
+    updateProgress();
+  })();
+  </script>
 </body>
 </html>

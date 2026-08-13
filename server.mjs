@@ -361,6 +361,52 @@ app.get("/training-thankyou", (req, res) => {
 });
 
 /* ────────────────────────────────────────────────
+ * Training funnel qualification form (backup capture)
+ * Stores every submission locally so no lead is lost even
+ * if the GHL webhook is missing or fails.
+ * ──────────────────────────────────────────────── */
+const QUALIFY_FILE = path.join(DATA_DIR, "qualify-leads.json");
+
+app.post("/api/qualify", (req, res) => {
+  const body = req.body || {};
+  const entry = {
+    received_at: new Date().toISOString(),
+    first_name: body.first_name || body.firstName || "",
+    phone: body.phone || "",
+    email: body.email || "",
+    age: body.age || "",
+    move_timeline: body.move_timeline || "",
+    down_payment: body.down_payment || "",
+    monthly_budget: body.monthly_budget || "",
+    evictions: body.evictions || "",
+    summary: body.message || body.notes || "",
+    page_url: body.page_url || "",
+    ip: req.headers["x-forwarded-for"] || req.socket.remoteAddress || "",
+  };
+
+  const leads = loadJSON(QUALIFY_FILE, []);
+  leads.push(entry);
+  saveJSON(QUALIFY_FILE, leads);
+  console.log("📋 Qualification form submission:", entry.first_name, entry.phone, entry.email);
+
+  // Optional: forward to GHL contacts API if a key is configured
+  if (process.env.GHL_API_KEY) {
+    submitLeadToGHL({
+      fullName: entry.first_name || "Website Lead",
+      email: entry.email,
+      phone: entry.phone,
+    });
+  }
+
+  res.json({ ok: true });
+});
+
+app.get("/api/qualify-leads", (req, res) => {
+  if (!req.session.user) return res.status(401).json({ error: "unauthorized" });
+  res.json(loadJSON(QUALIFY_FILE, []));
+});
+
+/* ────────────────────────────────────────────────
  * Property listings API endpoint
  * ──────────────────────────────────────────────── */
 const PROPERTIES_FILE = path.join(DATA_DIR, "properties.json");
