@@ -352,6 +352,10 @@ app.get("/training", (req, res) => {
   res.sendFile(path.join(DIST, "training.html"));
 });
 
+app.get("/training-watch", (req, res) => {
+  res.sendFile(path.join(DIST, "training-watch.html"));
+});
+
 app.get("/training-thankyou", (req, res) => {
   res.sendFile(path.join(DIST, "training-thankyou.html"));
 });
