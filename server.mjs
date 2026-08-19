@@ -291,15 +291,16 @@ app.get("/api/me", (req, res) => {
  * ──────────────────────────────────────────────── */
 function requireLogin(req, res, next) {
   if (req.session.user) return next();
-  const next_ = encodeURIComponent(req.originalUrl || "/properties");
+  const next_ = encodeURIComponent(req.originalUrl || "/thank-you");
   return res.redirect(`/login?next=${next_}`);
 }
 
-/* Legacy gated route. The old SPA thank-you page has been replaced by the
- * dedicated listings platform, so send logged-in visitors (and anyone with an
- * old bookmark or emailed link) straight to /properties. */
+/* Gated listings page. Must come before static + SPA catch-all.
+ * The listings UI on this page is upgraded in the browser by
+ * /assets/hrh-listings-v5.js (filters, search, saved homes). */
 app.get("/thank-you", requireLogin, (req, res) => {
-  res.redirect(301, "/properties");
+  res.set("Cache-Control", "no-store");
+  res.sendFile(path.join(DIST, "index.html"));
 });
 
 /* ────────────────────────────────────────────────
@@ -307,7 +308,7 @@ app.get("/thank-you", requireLogin, (req, res) => {
  * ──────────────────────────────────────────────── */
 app.get(["/login", "/signup"], (req, res) => {
   if (req.session.user) {
-    return res.redirect("/properties");
+    return res.redirect("/thank-you");
   }
   res.set("Cache-Control", "no-store");
   res.sendFile(path.join(DIST, "login.html"));
@@ -559,19 +560,10 @@ app.get("/api/admin/favorites", (req, res) => {
   });
 });
 
-/* ────────────────────────────────────────────────
- * Listings pages
- * /properties  — public browsing (signup prompts for saving)
- * /favorites   — gated, the user's saved homes
- * ──────────────────────────────────────────────── */
-app.get(["/properties", "/listings", "/homes"], (req, res) => {
-  res.set("Cache-Control", "no-cache");
-  res.sendFile(path.join(DIST, "properties.html"));
-});
-
-app.get("/favorites", requireLogin, (req, res) => {
-  res.set("Cache-Control", "no-store");
-  res.sendFile(path.join(DIST, "favorites.html"));
+/* Listings live on the gated /thank-you page (see above). These aliases exist
+ * so shared links and old bookmarks land on the listings instead of a 404. */
+app.get(["/properties", "/listings", "/homes", "/favorites"], (req, res) => {
+  res.redirect(302, "/thank-you");
 });
 
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
