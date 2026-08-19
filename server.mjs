@@ -22,6 +22,7 @@ const DIST = path.join(__dirname, "dist");
 const DATA_DIR = process.env.DATA_DIR || __dirname;
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const SESSIONS_FILE = path.join(DATA_DIR, "sessions.json");
+const FAVORITES_FILE = path.join(DATA_DIR, "favorites.json");
 
 function loadJSON(filePath, fallback) {
   try {
@@ -290,14 +291,15 @@ app.get("/api/me", (req, res) => {
  * ──────────────────────────────────────────────── */
 function requireLogin(req, res, next) {
   if (req.session.user) return next();
-  const next_ = encodeURIComponent(req.originalUrl || "/thank-you");
+  const next_ = encodeURIComponent(req.originalUrl || "/properties");
   return res.redirect(`/login?next=${next_}`);
 }
 
-/* Gated route MUST come before static + SPA catch-all */
+/* Legacy gated route. The old SPA thank-you page has been replaced by the
+ * dedicated listings platform, so send logged-in visitors (and anyone with an
+ * old bookmark or emailed link) straight to /properties. */
 app.get("/thank-you", requireLogin, (req, res) => {
-  res.set("Cache-Control", "no-store");
-  res.sendFile(path.join(DIST, "index.html"));
+  res.redirect(301, "/properties");
 });
 
 /* ────────────────────────────────────────────────
@@ -305,7 +307,7 @@ app.get("/thank-you", requireLogin, (req, res) => {
  * ──────────────────────────────────────────────── */
 app.get(["/login", "/signup"], (req, res) => {
   if (req.session.user) {
-    return res.redirect("/thank-you");
+    return res.redirect("/properties");
   }
   res.set("Cache-Control", "no-store");
   res.sendFile(path.join(DIST, "login.html"));
@@ -420,6 +422,158 @@ app.get("/api/properties", (req, res) => {
   res.json(properties);
 });
 
+/* ────────────────────────────────────────────────
+ * Favorites — saved homes per user
+ * Stored as { "<userId>": ["HRH-006", "HRH-041"] }
+ * ──────────────────────────────────────────────── */
+let favorites = loadJSON(FAVORITES_FILE, {});
+
+function saveFavorites() {
+  saveJSON(FAVORITES_FILE, favorites);
+}
+
+function getUserFavorites(userId) {
+  const list = favorites[String(userId)];
+  return Array.isArray(list) ? list : [];
+}
+
+function requireAuthJSON(req, res, next) {
+  if (req.session.user) return next();
+  return res.status(401).json({ error: "login_required" });
+}
+
+/** Validates a property id against properties.json so we never store junk. */
+function validPropertyId(id) {
+  if (typeof id !== "string" || !id.trim()) return false;
+  const properties = loadJSON(PROPERTIES_FILE, []);
+  return properties.some((p) => p.id === id);
+}
+
+app.get("/api/favorites", requireAuthJSON, (req, res) => {
+  res.set("Cache-Control", "no-store");
+  res.json({ ok: true, favorites: getUserFavorites(req.session.user.id) });
+});
+
+app.post("/api/favorites/add", requireAuthJSON, (req, res) => {
+  const { propertyId } = req.body || {};
+  if (!validPropertyId(propertyId)) {
+    return res.status(400).json({ error: "invalid_property" });
+  }
+  const key = String(req.session.user.id);
+  const list = getUserFavorites(key);
+  if (!list.includes(propertyId)) {
+    list.push(propertyId);
+    favorites[key] = list;
+    saveFavorites();
+    console.log(`❤️  ${req.session.user.email} saved ${propertyId}`);
+  }
+  res.json({ ok: true, favorites: list });
+});
+
+app.post("/api/favorites/remove", requireAuthJSON, (req, res) => {
+  const { propertyId } = req.body || {};
+  if (typeof propertyId !== "string" || !propertyId.trim()) {
+    return res.status(400).json({ error: "invalid_property" });
+  }
+  const key = String(req.session.user.id);
+  const list = getUserFavorites(key).filter((id) => id !== propertyId);
+  favorites[key] = list;
+  saveFavorites();
+  res.json({ ok: true, favorites: list });
+});
+
+/* ────────────────────────────────────────────────
+ * Admin — see every user's saved homes (buyer intent signal)
+ * Access: logged-in admin email, or x-admin-secret header.
+ * ──────────────────────────────────────────────── */
+const ADMIN_EMAILS = (process.env.ADMIN_EMAILS ||
+  "tez@tezbuyshouses.com,info@homerunhomes.casa")
+  .split(",")
+  .map((e) => e.trim().toLowerCase())
+  .filter(Boolean);
+
+const ADMIN_SECRET = process.env.ADMIN_SECRET || "";
+
+function isAdmin(req) {
+  const headerSecret = req.headers["x-admin-secret"];
+  if (ADMIN_SECRET && headerSecret && headerSecret === ADMIN_SECRET) return true;
+  const email = req.session.user?.email?.toLowerCase();
+  return !!email && ADMIN_EMAILS.includes(email);
+}
+
+app.get("/api/admin/favorites", (req, res) => {
+  if (!isAdmin(req)) return res.status(403).json({ error: "forbidden" });
+  res.set("Cache-Control", "no-store");
+
+  const properties = loadJSON(PROPERTIES_FILE, []);
+  const byId = new Map(properties.map((p) => [p.id, p]));
+
+  const report = users.map((u) => {
+    const ids = getUserFavorites(u.id);
+    return {
+      userId: u.id,
+      name: u.full_name,
+      email: u.email,
+      phone: u.phone,
+      signedUpAt: u.created_at,
+      favoriteCount: ids.length,
+      favorites: ids.map((id) => {
+        const p = byId.get(id);
+        return {
+          propertyId: id,
+          address: p ? p.address : "(no longer listed)",
+          city: p ? p.cityCanonical || p.city : "",
+          purchasePrice: p ? p.purchasePrice : "",
+          monthlyPayment: p ? p.monthlyPayment : "",
+          status: p ? p.status : "",
+        };
+      }),
+    };
+  });
+
+  // Most-saved properties first — tells Tez which homes are in demand.
+  const tally = new Map();
+  for (const ids of Object.values(favorites)) {
+    for (const id of ids || []) tally.set(id, (tally.get(id) || 0) + 1);
+  }
+  const mostSaved = [...tally.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([id, count]) => {
+      const p = byId.get(id);
+      return {
+        propertyId: id,
+        address: p ? p.address : "(no longer listed)",
+        city: p ? p.cityCanonical || p.city : "",
+        saves: count,
+      };
+    });
+
+  res.json({
+    ok: true,
+    generatedAt: new Date().toISOString(),
+    totalUsers: users.length,
+    usersWithFavorites: report.filter((r) => r.favoriteCount > 0).length,
+    totalSaves: [...tally.values()].reduce((a, b) => a + b, 0),
+    mostSaved,
+    users: report.sort((a, b) => b.favoriteCount - a.favoriteCount),
+  });
+});
+
+/* ────────────────────────────────────────────────
+ * Listings pages
+ * /properties  — public browsing (signup prompts for saving)
+ * /favorites   — gated, the user's saved homes
+ * ──────────────────────────────────────────────── */
+app.get(["/properties", "/listings", "/homes"], (req, res) => {
+  res.set("Cache-Control", "no-cache");
+  res.sendFile(path.join(DIST, "properties.html"));
+});
+
+app.get("/favorites", requireLogin, (req, res) => {
+  res.set("Cache-Control", "no-store");
+  res.sendFile(path.join(DIST, "favorites.html"));
+});
+
 // SPA fallback — all routes serve index.html (client-side routing handles the rest)
 app.get("*", (req, res) => {
   res.set("Cache-Control", "no-cache");
@@ -429,9 +583,4 @@ app.get("*", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Home Run Homes running on port ${PORT}`);
 });
-
-
-/* ────────────────────────────────────────────────
- * Property listings API endpoint
- * ──────────────────────────────────────────────── */
 

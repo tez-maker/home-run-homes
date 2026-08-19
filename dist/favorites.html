@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Saved Homes | Home Run Homes</title>
+  <meta name="description" content="Your saved owner-financed homes in the Oklahoma City metro." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..1000;1,6..12,300..1000&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/hrh-listings-v3.css" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '859563789884057');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body data-page="favorites">
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=859563789884057&ev=PageView&noscript=1" /></noscript>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logo-white-bg_3975df56.png" alt="Home Run Homes" />
+        <span class="brand-text">
+          <strong>HOME RUN HOMES</strong>
+          <span>Oklahoma City Metro</span>
+        </span>
+      </a>
+      <span class="header-spacer"></span>
+      <nav class="header-nav" id="header-nav"></nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>MY <em>SAVED</em> HOMES</h1>
+    <p>Every home you have hearted, in one place. Ready to move on one? Reach out and we will get you the details.</p>
+  </section>
+
+  <section class="filters">
+    <div class="filters-inner">
+      <div class="search-row">
+        <div class="search-wrap">
+          <span id="search-icon-slot"></span>
+          <input type="search" id="f-search" placeholder="Search your saved homes" aria-label="Search your saved homes" autocomplete="off" />
+        </div>
+        <button class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="filter-grid">Filters</button>
+      </div>
+
+      <div class="filter-grid" id="filter-grid">
+        <div class="field">
+          <label for="f-city">City</label>
+          <select id="f-city"><option value="">All Cities</option></select>
+        </div>
+        <div class="field">
+          <label for="f-price">Price</label>
+          <select id="f-price">
+            <option value="">Any Price</option>
+            <option value="0-100000">Under $100k</option>
+            <option value="100000-150000">$100k &ndash; $150k</option>
+            <option value="150000-200000">$150k &ndash; $200k</option>
+            <option value="200000-250000">$200k &ndash; $250k</option>
+            <option value="250000-350000">$250k &ndash; $350k</option>
+            <option value="350000-">$350k+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-beds">Beds</label>
+          <select id="f-beds">
+            <option value="">Any Beds</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-baths">Baths</label>
+          <select id="f-baths">
+            <option value="">Any Baths</option>
+            <option value="1">1+</option>
+            <option value="1.5">1.5+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-status">Status</label>
+          <select id="f-status">
+            <option value="">All Status</option>
+            <option value="Available">Available</option>
+            <option value="Sold">Sold</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-sort">Sort By</label>
+          <select id="f-sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="monthly-asc">Lowest Monthly</option>
+            <option value="down-asc">Lowest Down</option>
+            <option value="beds-desc">Most Bedrooms</option>
+          </select>
+        </div>
+        <button class="btn-reset" id="f-reset">Clear Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="results-bar">
+      <h2>SAVED HOMES</h2>
+      <span class="count" id="result-count">Loading&hellip;</span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div id="empty-state" hidden></div>
+  </main>
+
+  <div class="overlay" id="prompt-overlay" role="dialog" aria-modal="true" aria-labelledby="prompt-title">
+    <div class="modal">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div class="prompt-body">
+        <div class="heart-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </div>
+        <h3 id="prompt-title">CREATE A FREE ACCOUNT TO SAVE HOMES AND STAY UP TO DATE</h3>
+        <p>Save every home you like, compare them side by side, and get a text when a new one hits the list.</p>
+        <div class="prompt-actions">
+          <a class="primary" href="/signup?next=%2Ffavorites">Sign Up Free</a>
+          <a class="secondary" href="/login?next=%2Ffavorites">I Already Have an Account</a>
+        </div>
+        <p class="prompt-fine">100% free for buyers. We never sell your information.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="detail-overlay" role="dialog" aria-modal="true" aria-label="Property details">
+    <div class="modal wide">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <a class="phone" href="tel:+14057618014">(405) 761-8014</a>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/properties">Browse Homes</a>
+      <a href="/favorites">Saved Homes</a>
+      <a href="/path-home">Get Started</a>
+      <a href="/rent-to-own-guide">Free Guide</a>
+    </div>
+    <p class="disclaimer">One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Please ask questions and read all agreements carefully before signing.</p>
+  </footer>
+
+  <script src="/assets/hrh-listings-v3.js" defer></script>
+</body>
+</html>

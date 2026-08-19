@@ -290,8 +290,8 @@
 
     function getNext() {
       const params = new URLSearchParams(location.search);
-      const next = params.get("next") || "/thank-you";
-      return next.startsWith("/") && !next.startsWith("//") ? next : "/thank-you";
+      const next = params.get("next") || "/properties";
+      return next.startsWith("/") && !next.startsWith("//") ? next : "/properties";
     }
 
     function showMsg(id, text, type) {
