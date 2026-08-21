@@ -442,7 +442,7 @@
   </section>
 
   <!-- RSVP Form -->
-  <section class="form-section">
+  <section class="form-section" id="rsvp-form">
     <div class="container">
       <h2>Reserve Your Seat</h2>
       <p>Seats are limited. Enter your info below to lock in your spot — it's completely free.</p>
@@ -469,32 +469,6 @@
     </div>
   </section>
 
-  <!-- Event Details -->
-  <section class="details-section">
-    <div class="details-grid">
-      <div class="detail-card">
-        <div class="icon">📅</div>
-        <div class="label">Date</div>
-        <div class="value">Saturday, Aug 29</div>
-      </div>
-      <div class="detail-card">
-        <div class="icon">🕘</div>
-        <div class="label">Time</div>
-        <div class="value">9:00 AM – 12:00 PM</div>
-      </div>
-      <div class="detail-card">
-        <div class="icon">📍</div>
-        <div class="label">Location</div>
-        <div class="value">Oklahoma City (details after RSVP)</div>
-      </div>
-      <div class="detail-card">
-        <div class="icon">💰</div>
-        <div class="label">Cost</div>
-        <div class="value">100% FREE</div>
-      </div>
-    </div>
-  </section>
-
   <!-- Social Proof from Event #1 -->
   <section class="social-proof">
     <div class="container">
@@ -517,13 +491,6 @@
     </div>
   </section>
 
-  <!-- Community Image from Event #1 -->
-  <section class="community-img-section">
-    <div class="container">
-      <img src="/assets/community_photo.png" alt="Attendees at our first Rent-to-Own Home Buying Seminar" />
-    </div>
-  </section>
-
   <!-- What You'll Learn -->
   <section class="learn-section">
     <div class="container">
@@ -539,28 +506,18 @@
     </div>
   </section>
 
-  <!-- Perks -->
-  <section class="perks-section">
+  <!-- Get Your Ticket CTA -->
+  <section class="form-section" style="padding:2rem 1.5rem;">
+    <div class="container" style="text-align:center;">
+      <a href="#rsvp-form" style="display:inline-block;background:#b91c1c;color:#fff;font-size:1.1rem;font-weight:800;padding:1rem 2.5rem;border-radius:6px;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#991b1b'" onmouseout="this.style.background='#b91c1c'">Get Your Free Ticket →</a>
+    </div>
+  </section>
+
+  <!-- Photos from Event #1 -->
+  <section class="community-img-section" style="padding:3rem 1.5rem;">
     <div class="container">
-      <h2>What's Included</h2>
-      <div class="perks-grid">
-        <div class="perk-card">
-          <div class="perk-icon">🍕</div>
-          <div class="perk-title">Free Food & Refreshments</div>
-        </div>
-        <div class="perk-card">
-          <div class="perk-icon">🎁</div>
-          <div class="perk-title">2 Giveaways</div>
-        </div>
-        <div class="perk-card">
-          <div class="perk-icon">📚</div>
-          <div class="perk-title">Expert Training</div>
-        </div>
-        <div class="perk-card">
-          <div class="perk-icon">🤝</div>
-          <div class="perk-title">Meet the Team</div>
-        </div>
-      </div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:var(--navy);margin-bottom:1.5rem;text-align:center;">Photos from Event #1</h2>
+      <img src="/assets/community_photo.png" alt="Attendees at our first Rent-to-Own Home Buying Seminar" style="max-width:100%;width:480px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.1);display:block;margin:0 auto;" />
     </div>
   </section>
 
@@ -588,14 +545,17 @@
     </div>
   </section>
 
-  <!-- Bottom CTA — Facebook Group -->
-  <section class="bottom-cta">
+  <!-- FAQs -->
+  <section class="learn-section" style="background:var(--off-white);color:var(--navy);">
     <div class="container">
-      <h2>Can't Make It?</h2>
-      <p>No worries — join our free Oklahoma Rent-to-Own community on Facebook to stay in the loop and learn at your own pace.</p>
-      <a href="https://www.facebook.com/groups/renttoownokc" target="_blank" class="btn-fb">
-        Join the Free Community
-      </a>
+      <h2 style="color:var(--navy);">Frequently Asked Questions</h2>
+      <ul class="learn-list" style="color:var(--gray-800);">
+        <li style="color:var(--gray-800);border-color:var(--gray-200);"><strong>Do I need good credit?</strong> — No. This seminar is specifically for people who've been told no by banks.</li>
+        <li style="color:var(--gray-800);border-color:var(--gray-200);"><strong>Is this really free?</strong> — Yes, 100% free. No catch. We provide the training, food, and giveaways at no cost to you.</li>
+        <li style="color:var(--gray-800);border-color:var(--gray-200);"><strong>Do I need money saved?</strong> — Not to attend. But if you're ready to buy, having some savings helps. We'll explain everything at the event.</li>
+        <li style="color:var(--gray-800);border-color:var(--gray-200);"><strong>Can I bring someone?</strong> — Absolutely. Bring your spouse, partner, or anyone who'd benefit from learning about this.</li>
+        <li style="color:var(--gray-800);border-color:var(--gray-200);"><strong>What if I can't make it?</strong> — Join our free Facebook group to stay in the loop for future events.</li>
+      </ul>
     </div>
   </section>
 
