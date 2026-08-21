@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>SOLD OUT — Rent-to-Own Home Buying Seminar | Home Run Homes</title>
-  <meta name="description" content="The FREE Rent-to-Own Home Buying Seminar on July 25th is SOLD OUT! Join our community to get notified about the next event." />
+  <title>FREE Rent-to-Own Home Buying Seminar — Aug 29 | Home Run Homes</title>
+  <meta name="description" content="Join us Saturday, August 29th for a FREE Rent-to-Own Home Buying Seminar in Oklahoma City. Learn how to buy a home without a bank. Food, refreshments, and giveaways!" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SOLD OUT — Rent-to-Own Home Buying Seminar | Home Run Homes" />
-  <meta property="og:description" content="This event sold out! Join our free community to be first in line for the next one." />
+  <meta property="og:title" content="FREE Rent-to-Own Home Buying Seminar — Aug 29 | Home Run Homes" />
+  <meta property="og:description" content="Saturday, August 29th, 9am-12pm. Free food, giveaways, and learn how to buy a home without the bank. Limited seats!" />
   <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663238491479/iXyTzqjlNpIZcJtx.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,18 +53,18 @@
     }
     .container { max-width: 48rem; margin: 0 auto; padding: 0 1.5rem; }
 
-    /* ── Sold Out Banner ── */
-    .sold-out-bar {
+    /* ── Urgency Banner ── */
+    .urgency-bar {
       background: var(--red);
       color: var(--white);
       text-align: center;
       padding: 1rem 1.5rem;
       font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-    .sold-out-bar span {
+    .urgency-bar span {
       display: inline-block;
       animation: pulse 2s ease-in-out infinite;
     }
@@ -110,9 +110,9 @@
       font-style: italic;
       color: var(--accent-gold);
     }
-    .hero .sold-badge {
+    .hero .free-badge {
       display: inline-block;
-      background: var(--red);
+      background: var(--green);
       color: var(--white);
       font-size: 1.1rem;
       font-weight: 800;
@@ -132,80 +132,85 @@
       line-height: 1.7;
     }
 
-    /* ── CTA Section ── */
-    .cta-section {
+    /* ── Event Details ── */
+    .details-section {
       background: var(--off-white);
-      padding: 4rem 1.5rem;
+      padding: 3rem 1.5rem;
       text-align: center;
     }
-    .cta-section h2 {
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 36rem;
+      margin: 0 auto 2rem;
+    }
+    .detail-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .detail-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .detail-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-600);
+      margin-bottom: 0.25rem;
+    }
+    .detail-card .value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── Form Section ── */
+    .form-section {
+      background: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .form-section h2 {
       font-family: var(--font-display);
       font-size: clamp(1.4rem, 3.5vw, 2rem);
       font-weight: 700;
       color: var(--navy);
       margin-bottom: 0.75rem;
-      line-height: 1.2;
     }
-    .cta-section p {
+    .form-section p {
       color: var(--gray-600);
       font-size: 1rem;
       max-width: 32rem;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
+      margin: 0 auto 1.5rem;
     }
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      max-width: 24rem;
+    .form-wrapper {
+      max-width: 28rem;
       margin: 0 auto;
-    }
-    .btn-primary {
-      display: inline-block;
-      width: 100%;
-      background: #1877F2;
-      color: var(--white);
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      transition: background 0.2s, transform 0.15s;
-      letter-spacing: 0.02em;
-    }
-    .btn-primary:hover { background: #1565d8; transform: scale(1.02); }
-    .btn-primary:active { transform: scale(0.98); }
-    .btn-secondary {
-      display: inline-block;
-      width: 100%;
-      background: var(--white);
-      color: var(--navy);
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 0.9rem 2rem;
-      border: 2px solid var(--gray-200);
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      transition: border-color 0.2s, transform 0.15s;
-    }
-    .btn-secondary:hover { border-color: var(--navy); transform: scale(1.02); }
-    .btn-secondary:active { transform: scale(0.98); }
-    .btn-icon {
-      margin-right: 0.5rem;
-      vertical-align: middle;
+      min-height: 320px;
     }
 
     /* ── Social Proof ── */
     .social-proof {
-      background: var(--white);
+      background: var(--off-white);
       padding: 3rem 1.5rem;
       text-align: center;
+    }
+    .social-proof h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .social-proof .subtitle-text {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
     }
     .social-proof .stat-row {
       display: flex;
@@ -230,124 +235,11 @@
       letter-spacing: 0.08em;
       margin-top: 0.25rem;
     }
-    .social-proof .proof-text {
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      max-width: 28rem;
-      margin: 0 auto;
-      font-style: italic;
-    }
-
-    /* ── What You Missed ── */
-    .missed-section {
-      background: var(--navy-mid);
-      color: var(--white);
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    .missed-section h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.3rem, 3vw, 1.75rem);
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: var(--white);
-    }
-    .missed-list {
-      max-width: 32rem;
-      margin: 0 auto;
-      text-align: left;
-      list-style: none;
-    }
-    .missed-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.8);
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-    }
-    .missed-list li::before {
-      content: '✓';
-      color: var(--accent-gold);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .missed-cta {
-      margin-top: 2rem;
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.6);
-    }
-    .missed-cta a {
-      color: var(--accent-gold);
-      text-decoration: underline;
-    }
-
-    /* ── Waitlist Section ── */
-    .waitlist-section {
-      background: var(--off-white);
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    .waitlist-section h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.3rem, 3vw, 1.75rem);
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-    .waitlist-section p {
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      max-width: 28rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .waitlist-form {
-      max-width: 24rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .waitlist-form input {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--gray-200);
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-family: var(--font-body);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .waitlist-form input:focus {
-      border-color: var(--navy);
-    }
-    .waitlist-form button {
-      background: var(--navy);
-      color: var(--white);
-      font-size: 0.95rem;
-      font-weight: 700;
-      padding: 0.85rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .waitlist-form button:hover { background: var(--gray-800); }
-    .waitlist-success {
-      display: none;
-      color: var(--green);
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
 
     /* ── Community Image ── */
     .community-img-section {
       background: var(--white);
-      padding: 2rem 1.5rem 0;
+      padding: 2rem 1.5rem;
       text-align: center;
     }
     .community-img-section img {
@@ -357,9 +249,82 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     }
 
+    /* ── What You'll Learn ── */
+    .learn-section {
+      background: var(--navy-mid);
+      color: var(--white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .learn-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+    .learn-list {
+      max-width: 32rem;
+      margin: 0 auto;
+      text-align: left;
+      list-style: none;
+    }
+    .learn-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .learn-list li::before {
+      content: '✓';
+      color: var(--accent-gold);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── Perks ── */
+    .perks-section {
+      background: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .perks-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+    .perk-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    .perk-card .perk-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .perk-card .perk-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
     /* ── Testimonials ── */
     .testimonials-section {
-      background: var(--white);
+      background: var(--off-white);
       padding: 4rem 1.5rem;
       text-align: center;
     }
@@ -378,7 +343,7 @@
       margin: 0 auto;
     }
     .testimonial-card {
-      background: var(--off-white);
+      background: var(--white);
       border: 1px solid var(--gray-200);
       border-radius: 8px;
       padding: 1.5rem;
@@ -402,9 +367,44 @@
       margin-bottom: 0.5rem;
     }
 
+    /* ── Bottom CTA ── */
+    .bottom-cta {
+      background: var(--navy);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .bottom-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .bottom-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      max-width: 28rem;
+      margin: 0 auto 1.5rem;
+    }
+    .btn-fb {
+      display: inline-block;
+      background: #1877F2;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-fb:hover { background: #1565d8; transform: scale(1.02); }
+
     /* ── Footer ── */
     .footer-section {
-      background: var(--navy);
+      background: var(--navy-mid);
       padding: 2rem 1.5rem;
       text-align: center;
     }
@@ -420,70 +420,115 @@
     @media (max-width: 640px) {
       .social-proof .stat-row { gap: 2rem; }
       .social-proof .stat-number { font-size: 2rem; }
+      .details-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sold Out Banner -->
-  <div class="sold-out-bar">
-    <span>🎉 THIS EVENT IS OFFICIALLY SOLD OUT 🎉</span>
+  <!-- Urgency Banner -->
+  <div class="urgency-bar">
+    <span>LIMITED SEATS — REGISTER FREE BELOW</span>
   </div>
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="event-label">July 25th, 2026 &nbsp;·&nbsp; Oklahoma City</div>
+      <div class="event-label">Saturday, August 29th &nbsp;·&nbsp; Oklahoma City</div>
       <h1>Rent-to-Own<br><em>Home Buying Seminar</em></h1>
-      <div class="sold-badge">SOLD OUT</div>
-      <p class="subtitle">This event filled up fast! But don't worry — join our free community to get first access to the next one and start learning about homeownership today.</p>
+      <div class="free-badge">FREE EVENT</div>
+      <p class="subtitle">Learn exactly how families in OKC are buying homes without the bank — no credit check, no bank approval. Free food, refreshments, and giveaways.</p>
     </div>
   </section>
 
-  <!-- Social Proof -->
+  <!-- Event Details -->
+  <section class="details-section">
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="icon">📅</div>
+        <div class="label">Date</div>
+        <div class="value">Saturday, Aug 29</div>
+      </div>
+      <div class="detail-card">
+        <div class="icon">🕘</div>
+        <div class="label">Time</div>
+        <div class="value">9:00 AM – 12:00 PM</div>
+      </div>
+      <div class="detail-card">
+        <div class="icon">📍</div>
+        <div class="label">Location</div>
+        <div class="value">124 NW 12th St, OKC</div>
+      </div>
+      <div class="detail-card">
+        <div class="icon">💰</div>
+        <div class="label">Cost</div>
+        <div class="value">100% FREE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Form -->
+  <section class="form-section">
+    <div class="container">
+      <h2>Reserve Your Seat</h2>
+      <p>Seats are limited. Enter your info below to lock in your spot — it's completely free.</p>
+      <div class="form-wrapper">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/qPoGQGGV3ldcQAct6zvx"
+          style="width:100%;height:320px;border:none;border-radius:8px;"
+          id="inline-qPoGQGGV3ldcQAct6zvx"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Free Training Form"
+          data-height="320"
+          data-layout-iframe-id="inline-qPoGQGGV3ldcQAct6zvx"
+          data-form-id="qPoGQGGV3ldcQAct6zvx"
+          title="Free Training Form"
+        ></iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof from Event #1 -->
   <section class="social-proof">
     <div class="container">
+      <h2>Our First Seminar Sold Out</h2>
+      <p class="subtitle-text">Here's what happened at our July 25th event:</p>
       <div class="stat-row">
         <div class="stat">
-          <div class="stat-number">50</div>
-          <div class="stat-label">Seats Filled</div>
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Attendees</div>
         </div>
-
         <div class="stat">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Capacity</div>
+          <div class="stat-label">Sold Out</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Giveaway Winners</div>
         </div>
       </div>
-      <p class="proof-text">"People are hungry for this information. The next event will sell out even faster."</p>
     </div>
   </section>
 
-  <!-- Main CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Don't Miss the Next One</h2>
-      <p>Join our free Oklahoma Rent-to-Own community on Facebook. You'll get notified first about upcoming events, see available homes, and connect with others on the same path to homeownership.</p>
-      <div class="cta-buttons">
-        <a href="https://www.facebook.com/groups/renttoownokc" target="_blank" class="btn-primary">
-          <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Join the Free Community
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community Image -->
+  <!-- Community Image from Event #1 -->
   <section class="community-img-section">
     <div class="container">
-      <img src="/assets/community_photo.png" alt="Community of homeowners" id="community-photo" />
+      <img src="/assets/community_photo.png" alt="Attendees at our first Rent-to-Own Home Buying Seminar" />
     </div>
   </section>
 
-  <!-- What You Missed -->
-  <section class="missed-section">
+  <!-- What You'll Learn -->
+  <section class="learn-section">
     <div class="container">
-      <h2>What This Seminar Covers</h2>
-      <ul class="missed-list">
+      <h2>What You'll Learn</h2>
+      <ul class="learn-list">
         <li>How rent-to-own and owner financing actually work (step by step)</li>
         <li>Why you don't need a bank or perfect credit to buy a home</li>
         <li>What to look for in a contract — and what to avoid</li>
@@ -491,33 +536,66 @@
         <li>Real examples of OKC families who bought homes this way</li>
         <li>Live Q&A with a licensed real estate professional</li>
       </ul>
-      <p class="missed-cta">Can't wait for the next event? <a href="https://www.facebook.com/groups/renttoownokc" target="_blank">Join the community</a> and start learning today.</p>
     </div>
   </section>
 
+  <!-- Perks -->
+  <section class="perks-section">
+    <div class="container">
+      <h2>What's Included</h2>
+      <div class="perks-grid">
+        <div class="perk-card">
+          <div class="perk-icon">🍕</div>
+          <div class="perk-title">Free Food & Refreshments</div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon">🎁</div>
+          <div class="perk-title">2 Giveaways</div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon">📚</div>
+          <div class="perk-title">Expert Training</div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon">🤝</div>
+          <div class="perk-title">Meet the Team</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-  <!-- Testimonials -->
+  <!-- Testimonials from Event #1 -->
   <section class="testimonials-section">
     <div class="container">
-      <h2>What People Are Saying</h2>
+      <h2>What People Said About Event #1</h2>
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <div class="testimonial-stars">★★★★★</div>
-          <p class="quote">"I thought homeownership was impossible for me. Home Run Homes showed me it wasn't. Now I'm a homeowner."</p>
-          <p class="author">— Maria, Moore OK</p>
+          <p class="quote">"[Testimonial placeholder — add quote from first event attendee]"</p>
+          <p class="author">— Attendee Name</p>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-stars">★★★★★</div>
-          <p class="quote">"We thought a foreclosure meant we'd never own again. Home Run Homes believed in us when we didn't believe in ourselves."</p>
-          <p class="author">— James & Jennifer, Edmond OK</p>
+          <p class="quote">"[Testimonial placeholder — add quote from first event attendee]"</p>
+          <p class="author">— Attendee Name</p>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-stars">★★★★★</div>
-          <p class="quote">"No bank would touch us. Home Run Homes found us a beautiful 3-bedroom in Midwest City with owner financing. We moved in within 30 days."</p>
-          <p class="author">— DeShawn, Midwest City OK</p>
+          <p class="quote">"[Testimonial placeholder — add quote from first event attendee]"</p>
+          <p class="author">— Attendee Name</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA — Facebook Group -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Can't Make It?</h2>
+      <p>No worries — join our free Oklahoma Rent-to-Own community on Facebook to stay in the loop and learn at your own pace.</p>
+      <a href="https://www.facebook.com/groups/renttoownokc" target="_blank" class="btn-fb">
+        Join the Free Community
+      </a>
     </div>
   </section>
 
@@ -525,8 +603,6 @@
   <section class="footer-section">
     <p class="disclaimer">One or more managing members hold an active real estate license in Oklahoma. This is not financial advice, nor are we acting as financial advisors. Home Run Homes is a matchmaking service connecting buyers with owner-financed properties. Always read agreements before signing and consult with appropriate professionals.</p>
   </section>
-
-
 
   <!-- GHL Chat Widget -->
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4c42c8af4e6247183f64a8" data-source="WEB_USER" defer></script>
